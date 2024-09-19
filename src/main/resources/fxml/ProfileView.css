@@ -1,0 +1,39 @@
+@font-face {
+    src: url('../sprite/Font-font.ttf');
+    -fx-font-family: "BubbleBobbleNes";
+}
+.anchor-pane {
+    -fx-background-color: linear-gradient(#2C3E50 0%,#34495E 50%,#4CA1AF  100%) ;
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+}
+.label {
+    -fx-font-family: 'BubbleBobbleNes';
+    -fx-font-size: 20px;
+    -fx-text-fill: white;
+    -fx-background-color: transparent;
+}
+
+.label-link{
+    -fx-font-family: 'BubbleBobbleNes';
+    -fx-font-size: 14px;
+    -fx-text-fill: white;
+
+    -fx-background-color: transparent;
+}
+.label-link:hover{
+    -fx-cursor: hand;
+    -fx-text-fill: #3498db;
+}
+.button{
+    -fx-font-family: "BubbleBobbleNes";
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-size: 20;
+    -fx-animated: true;
+}
+
+.button-generalbutton:hover{
+    -fx-cursor: hand;
+    -fx-background-color: #168100;
+}

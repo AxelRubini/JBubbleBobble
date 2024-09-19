@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="436.0" prefWidth="572.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jbubblebobble.controller.LogInController">
+   <children>
+      <VBox fx:id="errorMessage" layoutX="201.0" maxHeight="467.0" maxWidth="171.0" prefHeight="467.0" prefWidth="171.0" spacing="10.0" AnchorPane.topAnchor="150.0">
+         <children>
+            <Label centerShape="false" stylesheets="@Label.css" text="username">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="userNameBox" alignment="CENTER" centerShape="false">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </TextField>
+            <Label centerShape="false" layoutX="10.0" layoutY="10.0" stylesheets="@Label.css" text="password">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="passwordBox" alignment="CENTER" centerShape="false" />
+            <Button fx:id="loginButton" alignment="TOP_LEFT" centerShape="false" mnemonicParsing="false" stylesheets="@Button.css" text="login">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="35.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+            <Text fx:id="errorText" fill="#f80000" layoutY="10.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: BubbleBobbleNes;" wrappingWidth="199.734375">
+               <font>
+                  <Font name="BubbleBobbleNes Regular" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </VBox.margin>
+            </Text>
+         </children>
+      </VBox>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="25.0" layoutY="255.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../menus/LogIn.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="653.0" fitWidth="201.0" layoutX="186.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true" scaleX="2.0" scaleY="2.0">
+         <image>
+            <Image url="@../menus/LogIn2.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="407.0" layoutY="255.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../menus/LogIn.png" />
+         </image>
+      </ImageView>
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+   <cursor>
+      <Cursor fx:constant="HAND" />
+   </cursor>
+</AnchorPane>

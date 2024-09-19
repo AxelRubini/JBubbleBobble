@@ -1,0 +1,98 @@
+@font-face {
+    src: url('../sprite/Font-font.ttf');
+    -fx-font-family: "BubbleBobbleNes";
+}
+.anchor-pane {
+    -fx-background-color: linear-gradient(#FF6F61 0%,#FFD700 25%,#00FA9A 50%,#87CEEB 100%) ;
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+}
+.table-view {
+    -fx-background-color: transparent;
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: transparent;
+    -fx-background-radius: 5px 5px 0 0;
+    -fx-background-insets: 0 0 0 0;
+}
+
+.table-view .column-header, .table-view .filler {
+    -fx-background-color: transparent;
+    -fx-size: 35;
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: transparent;
+}
+
+.table-view .column-header .label {
+    -fx-font-family: 'BubbleBobbleNes';
+    -fx-font-size: 18px;
+    -fx-text-fill: black;
+}
+
+.table-view .table-row-cell {
+    -fx-background-color: rgba(255, 255, 255, 0.2);
+    -fx-table-cell-border-color: transparent;
+}
+
+.table-view .table-row-cell:odd {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+}
+
+.table-view .table-row-cell:selected {
+    -fx-background-color: #006400;
+}
+
+.table-view .table-cell {
+    -fx-text-fill: black;
+    -fx-font-family: 'BubbleBobbleNes';
+    -fx-font-size: 20px;
+    -fx-alignment: center;
+}
+.table-view .table-cell:empty {
+    -fx-background-color: transparent;
+}
+
+.table-view .scroll-bar {
+    -fx-background-color: transparent;
+}
+
+.table-view .scroll-bar:vertical .thumb {
+    -fx-background-color: transparent;
+    -fx-background-radius: 5px;
+}
+
+.table-view .scroll-bar:horizontal .thumb {
+    -fx-background-color: transparent;
+    -fx-background-radius: 5px;
+}
+
+.table-view .scroll-bar:vertical .track,
+.table-view .scroll-bar:horizontal .track {
+    -fx-background-color: rgba(0, 0, 0, 0.1);
+    -fx-background-radius: 5px;
+}
+
+.table-view .scroll-bar:vertical .increment-button,
+.table-view .scroll-bar:vertical .decrement-button,
+.table-view .scroll-bar:horizontal .increment-button,
+.table-view .scroll-bar:horizontal .decrement-button {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+    -fx-shape: null;
+}
+
+.button-returnbutton {
+    -fx-font-family: 'BubbleBobbleNes';
+    -fx-background-color: transparent;
+    -fx-text-fill: black;
+    -fx-font-size: 20;
+    -fx-animated: true;
+}
+.button-returnbutton:hover {
+    -fx-cursor: hand;
+    -fx-background-color: linear-gradient(#87CEEB 0%, #00FA9A 25%, #FFD700 50%, #FF6F61 100%) ;
+}
+

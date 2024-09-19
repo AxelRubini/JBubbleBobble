@@ -1,0 +1,4 @@
+,,47,73680,49,16,avatar1
+prova1,1234,2,900,4,0,default
+Axel,1234,11,5700,13,0,default
+prova,123456,0,0,0,0,avatar2

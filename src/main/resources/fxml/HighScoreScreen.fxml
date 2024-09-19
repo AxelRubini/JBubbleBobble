@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="436.0" prefWidth="572.0" styleClass="anchor-pane" stylesheets="@TableView.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jbubblebobble.controller.HighScoreController">
+   <children>
+      <TableView fx:id="tableView" layoutX="136.0" layoutY="18.0" prefHeight="400.0" prefWidth="300.0" stylesheets="@TableView.css" AnchorPane.leftAnchor="136.0" AnchorPane.topAnchor="18.0">
+        <columns>
+          <TableColumn id="column-header" fx:id="player" prefWidth="150.0" text="player" />
+          <TableColumn fx:id="score" prefWidth="150.0" sortable="false" text="highscore" />
+        </columns>
+      </TableView>
+      <Button fx:id="menuButton" mnemonicParsing="false" styleClass="button-returnbutton" stylesheets="@TableView.css" text="menu" AnchorPane.topAnchor="400.0" />
+   </children>
+</AnchorPane>

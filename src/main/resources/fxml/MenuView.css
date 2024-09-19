@@ -1,0 +1,22 @@
+@font-face {
+    src: url('../sprite/Font-font.ttf');
+    -fx-font-family: "BubbleBobbleNes";
+}
+
+.button{
+    -fx-font-family: "BubbleBobbleNes";
+    -fx-background-color: black;
+    -fx-text-fill: white;
+    -fx-font-size: 20;
+    -fx-animated: true;
+}
+
+.button-generalbutton:hover{
+    -fx-cursor: hand;
+    -fx-background-color: #168100;
+}
+
+.button-exitbutton:hover{
+    -fx-cursor: hand;
+    -fx-background-color: #8b0000;
+}

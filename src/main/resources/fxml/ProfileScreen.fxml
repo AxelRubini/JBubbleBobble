@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="436.0" prefWidth="572.0" styleClass="anchor-pane" stylesheets="@ProfileView.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jbubblebobble.controller.ProfileController">
+   <children>
+      <VBox layoutX="161.0" layoutY="-7.0" prefHeight="473.0" prefWidth="326.0" spacing="50.0" AnchorPane.leftAnchor="161.0">
+         <children>
+            <Label fx:id="name" stylesheets="@ProfileView.css" text="label">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets left="9.0" />
+               </padding></Label>
+            <Label fx:id="games" stylesheets="@ProfileView.css" text="label">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets left="9.0" />
+               </padding></Label>
+            <Label fx:id="highscore" stylesheets="@ProfileView.css" text="label">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets left="9.0" />
+               </padding></Label>
+            <Label fx:id="wonGame" stylesheets="@ProfileView.css" text="Label">
+               <rotationAxis>
+                  <Point3D />
+               </rotationAxis>
+               <padding>
+                  <Insets left="9.0" />
+               </padding>
+            </Label>
+            <Label fx:id="lostGame" stylesheets="@ProfileView.css" text="Label">
+               <padding>
+                  <Insets left="9.0" />
+               </padding>
+            </Label>
+            <Button fx:id="menu" alignment="CENTER" graphicTextGap="0.0" mnemonicParsing="false" onAction="#handleMenu" stylesheets="@ProfileView.css" text="menu" textAlignment="CENTER" />
+         </children>
+         <padding>
+            <Insets top="70.0" />
+         </padding>
+      </VBox>
+      <ImageView fx:id="avatar" fitHeight="150.0" fitWidth="150.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="407.0" layoutY="269.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../menus/LogIn.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="changeAvatar" layoutX="14.0" layoutY="164.0" styleClass="label-link" stylesheets="@ProfileView.css" text="change avatar">
+         <padding>
+            <Insets top="10.0" />
+         </padding>
+      </Label>
+   </children>
+</AnchorPane>
