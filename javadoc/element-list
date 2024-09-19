@@ -1,0 +1,15 @@
+module:jbubblebobble.jbubblebobble
+jbubblebobble.controller
+jbubblebobble.controller.applicationstate
+jbubblebobble.controller.command
+jbubblebobble.controller.gamestate
+jbubblebobble.model
+jbubblebobble.model.entity
+jbubblebobble.model.entity.bubble
+jbubblebobble.model.entity.characters
+jbubblebobble.model.entity.powerup
+jbubblebobble.model.entity.powerup.strategy
+jbubblebobble.model.level
+jbubblebobble.model.user
+jbubblebobble.view
+utility
