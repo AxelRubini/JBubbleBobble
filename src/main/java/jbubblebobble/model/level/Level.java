@@ -161,9 +161,11 @@ public class Level extends Observable implements Observer {
             player.setDistance(0);
             entities.add(createPowerUp(spawnPoint[0], spawnPoint[1], this, PowerUp.PowerUpType.SPEED_SHOES));
         }
-        if (player.getScore() >= Config.EXTRA_LIFE[extraLife]) {
+        if (extraLife < Config.EXTRA_LIFE.length && player.getScore() >= Config.EXTRA_LIFE[extraLife]) {
             extraLife++;
-            entities.add(createPowerUp(spawnPoint[0], spawnPoint[1], this, PowerUp.PowerUpType.EXTRA_LIFE));
+            if ( extraLife < Config.EXTRA_LIFE.length && player.getScore() < Config.EXTRA_LIFE[extraLife])  {
+                entities.add(createPowerUp(spawnPoint[0], spawnPoint[1], this, PowerUp.PowerUpType.EXTRA_LIFE));
+            }
         }
         if (player.getYellowGumCount() >= Config.RED_RING) {
             player.setYellowGumCount(0);
