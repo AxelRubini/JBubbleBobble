@@ -76,7 +76,7 @@ public class LevelController {
                 double elapsedTime = (now - lastUpdate) / 1_000_000_000.0;
                 if (elapsedTime >= UPDATE_INTERVAL) {
                     try {
-                        if (System.currentTimeMillis() - levelStartTime > 3000 || System.currentTimeMillis() - levelStartTime < 250) {
+                        if (System.currentTimeMillis() - levelStartTime > 3000) {
                             updateGame(elapsedTime);
                         }
 
