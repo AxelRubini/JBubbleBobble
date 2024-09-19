@@ -45,8 +45,7 @@ public class Player extends Entity implements PlatformDetection {
     private boolean alive;
     private int audio;
     private List<Observer> observers;
-    private int jumpCountCooldown;
-    private int MaxJumpCountCooldown = 1;
+    private long lastJumpTime;
 
     /**
      * Instantiates a new Player.
@@ -99,14 +98,6 @@ public class Player extends Entity implements PlatformDetection {
 
     }
 
-    /**
-     * Can jump boolean.
-     *
-     * @return the boolean
-     */
-    public boolean canJump(){
-        return jumpCount < MaxJumpCountCooldown;
-    }
 
     @Override
     protected void handleEntityCollision(Entity entity) {
@@ -221,8 +212,10 @@ public class Player extends Entity implements PlatformDetection {
 
         // Stop the player's movement in the direction of the collision
         if (minOverlap == overlapLeft || minOverlap == overlapRight) {
+            setVelocityY(Config.MAX_FALL_SPEED);
             setVelocityX(0);
         } else if (minOverlap == overlapTop || minOverlap == overlapBottom) {
+            jumping = false;
             setVelocityY(0);
     }
 }
@@ -252,7 +245,12 @@ public class Player extends Entity implements PlatformDetection {
         distance += speed;
         if (powerUpMoving){score += 10;}
     }
-
+    /**
+     * Check if enough time has passed since the last jump
+     */
+    private boolean canJump(){
+        return System.currentTimeMillis() - lastJumpTime > Config.JUMP_RATE;
+    }
     /**
      * The player jump vertically
      *
@@ -260,6 +258,7 @@ public class Player extends Entity implements PlatformDetection {
      */
     public boolean verticalJump(){
         if (state == PlayerState.DIE || !alive) return false;
+        if(!canJump()) return false;
         if(isOnPlatform(level,this) || ableToJump){
             velocityY = JUMP_STRENGTH;
             jumping = true;
@@ -268,6 +267,7 @@ public class Player extends Entity implements PlatformDetection {
             ableToJump = false;
             jumpCount++;
             if (powerUpJumping){score += 500;}
+            lastJumpTime = System.currentTimeMillis();
             return  true;
         }
         return false;
@@ -281,6 +281,7 @@ public class Player extends Entity implements PlatformDetection {
      */
     public boolean jump(boolean toRight) {
         if (state == PlayerState.DIE || !alive) return false;
+        if(!canJump()) return false;
         if(isOnPlatform(level,this)|| !jumping){
             velocityY = JUMP_STRENGTH;
             jumping = true;
@@ -289,6 +290,7 @@ public class Player extends Entity implements PlatformDetection {
             ableToJump = false;
             jumpCount++;
             if (powerUpJumping){score += 500;}
+            lastJumpTime = System.currentTimeMillis();
             return  true;
         }
         return false;

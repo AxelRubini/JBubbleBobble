@@ -32,9 +32,7 @@ public class Ghost extends Enemy implements PlatformDetection,Walker{
     protected void moveAI() {
         double playerY = level.getPlayer().getY();
         double ghostY = getY();
-        System.out.println("playerY: "+playerY + " ghostY: "+ghostY);
         if (playerY==ghostY) {
-            System.out.println("same y moveAI Ghost");
             fire();
         }
         walkerMove(this);

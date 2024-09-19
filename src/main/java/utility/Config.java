@@ -169,4 +169,8 @@ public final class Config {
      * The constant PATH_TO_AUDIO_ENEMY_DEATH.
      */
     public static final String PATH_TO_AUDIO_ENEMY_DEATH = "src/main/resources/sounds/EnemyDeath.wav";
+    /**
+     * The constant of JUMP_RATE.
+     */
+    public  static final  long JUMP_RATE = 500;
 }

@@ -29,7 +29,6 @@ public class MainMenuState implements ApplicationState {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/MenuBubbleBobble.fxml"));
             Parent root = loader.load();
             stage.setScene(new Scene(root));
-            System.out.println("some");
             stage.show();
         } catch (Exception e) {
             e.printStackTrace();
