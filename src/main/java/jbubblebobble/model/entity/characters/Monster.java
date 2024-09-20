@@ -23,7 +23,7 @@ public class Monster extends Enemy {
         init();
     }
 
-    private void init(){
+    private void init() {
         facingRight = true;
         state = EnemyState.FACING_RIGHT;
         speed = 1;
@@ -51,13 +51,15 @@ public class Monster extends Enemy {
             setY(getY() + velocityY);
         }
     }
+
     @Override
-    protected void handlePacManEffect(){
+    protected void handlePacManEffect() {
         super.handlePacManEffect();
-        if (getY()<0){
+        if (getY() < 0) {
             setY(Config.SCREEN_HEIGHT);
         }
     }
+
     /**
      * Handles the collision of the monster with a wall.
      *

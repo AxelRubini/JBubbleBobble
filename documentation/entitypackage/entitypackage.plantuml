@@ -1,0 +1,353 @@
+@startuml
+
+!theme plain
+top to bottom direction
+skinparam linetype ortho
+
+class AppleStrategy {
+  + AppleStrategy(): 
+  + applyPowerUp(Level): void
+}
+class BlueGumStrategy {
+  + BlueGumStrategy(): 
+  + applyPowerUp(Level): void
+}
+class BlueRingStrategy {
+  + BlueRingStrategy(): 
+  + applyPowerUp(Level): void
+}
+class Bubble {
+  + Bubble(double, double, boolean, Level, long): 
+  - floating: boolean
+  - state: BubbleState
+  - popping: boolean
+  + update(): void
+  # handleWallCollision(Wall): void
+  # updateFrame(): void
+  - setFloating(): void
+  # handleEntityCollision(Entity): void
+  + toString(): String
+   state: BubbleState
+   popping: boolean
+   floating: boolean
+   info: List<String>
+}
+enum BubbleState << enumeration >> {
+  + BubbleState(): 
+  + valueOf(String): BubbleState
+  + values(): BubbleState[]
+}
+class CherryStrategy {
+  + CherryStrategy(): 
+  + applyPowerUp(Level): void
+}
+class Coordinate {
+  + Coordinate(double, double): 
+  - x: double
+  - y: double
+  + distance(Coordinate): double
+  + applyCoordinate(double, double): void
+   y: double
+   x: double
+}
+class Enemy {
+  + Enemy(double, double, Level): 
+  # die: boolean
+  # jumping: boolean
+  # vulnerable: boolean
+  # vulnerableTime: long
+  # caughtByBubble: boolean
+  # vulnerableRoutine(): void
+  + dieRoutine(): void
+  # handleWallCollision(Wall): void
+  # randomize(): boolean
+  # stop(): void
+  # moveAI(): void
+  # moveAwayFromPlayer(): void
+  # handleEntityCollision(Entity): void
+  + update(): void
+  # jump(): void
+  # moveTowardsPlayer(): void
+   die: boolean
+   vulnerableTime: long
+   jumping: boolean
+   vulnerable: boolean
+   caughtByBubble: boolean
+   isFacingRight: boolean
+   info: List<String>
+}
+class EnemyBubble {
+  + EnemyBubble(double, double, Level, boolean): 
+  + update(): void
+  + setPopped(): void
+  # handleWallCollision(Wall): void
+  # updateFrame(): void
+  # handleEntityCollision(Entity): void
+   info: List<String>
+}
+enum EnemyBubbleState << enumeration >> {
+  + EnemyBubbleState(): 
+  + valueOf(String): EnemyBubbleState
+  + values(): EnemyBubbleState[]
+}
+enum EnemyState << enumeration >> {
+  + EnemyState(): 
+  + valueOf(String): EnemyState
+  + values(): EnemyState[]
+}
+class Entity {
+  + Entity(double, double, Level): 
+  # frames: List<Integer>
+  # velocityX: double
+  # height: double
+  # width: double
+  # velocityY: double
+  # isMoving: boolean
+  # level: Level
+  # currentFrame: int
+  # facingRight: boolean
+  # coordinate: Coordinate
+  + move(double, double): void
+  # checkWallCollision(): void
+  # checkEntityCollision(): void
+  # handleEntityCollision(Entity): void
+  # handlePacManEffect(): void
+  # updateFrame(): void
+  + stopFall(): void
+  + update(): void
+  # handleWallCollision(Wall): void
+   coordinate: Coordinate
+   velocityX: double
+   velocityY: double
+   die: boolean
+   y: double
+   x: double
+   isMoving: boolean
+   currentFrame: int
+   frames: List<Integer>
+   width: double
+   info: List<String>
+   level: Level
+   frame: int
+   facingRight: boolean
+   height: double
+}
+class ExtraLifeStrategy {
+  + ExtraLifeStrategy(): 
+  + applyPowerUp(Level): void
+}
+class Ghost {
+  + Ghost(double, double, Level): 
+  + update(): void
+  # moveAI(): void
+  - init(): void
+  + fire(): void
+  # jump(): void
+}
+class GlowingHeartStrategy {
+  + GlowingHeartStrategy(): 
+  + applyPowerUp(Level): void
+}
+class GrapeStrategy {
+  + GrapeStrategy(): 
+  + applyPowerUp(Level): void
+}
+class Monster {
+  + Monster(double, double, Level): 
+  # handleWallCollision(Wall): void
+  # handlePacManEffect(): void
+  # moveAI(): void
+  - init(): void
+  + update(): void
+}
+interface PlatformDetection << interface >> {
+  + isOnPlatform(Level, Entity): boolean
+}
+class Player {
+  - Player(double, double, Level): 
+  - bubbleBlown: int
+  - speed: double
+  - firing: boolean
+  - powerUpJumping: boolean
+  - lives: int
+  - jumpCount: int
+  - powerUpMoving: boolean
+  - jumping: boolean
+  - blueGumCount: int
+  - bubbleExploded: int
+  - yellowGumCount: int
+  - distance: double
+  - powerUpPurpleGum: boolean
+  - purpleGumCount: int
+  - powerUpFire: boolean
+  - state: PlayerState
+  - killedEnemies: int
+  - score: int
+  + loseLife(): void
+  + moveLeft(): void
+  + reset(): void
+  + getInstance(double, double, Level): Player
+  + updateFrame(): void
+  + update(): void
+  - notifyAudio(Observer): void
+  + jump(boolean): boolean
+  + respawn(): void
+  # handleWallCollision(Wall): void
+  + fire(): boolean
+  + addAudioObserver(Observer): void
+  + moveRight(): void
+  - canJump(): boolean
+  - init(): void
+  + stopMoving(): void
+  # handleEntityCollision(Entity): void
+  + verticalJump(): boolean
+   distance: double
+   powerUpPurpleGum: boolean
+   die: boolean
+   powerUpJumping: boolean
+   purpleGumCount: int
+   jumping: boolean
+   score: int
+   killedEnemies: int
+   jumpCount: int
+   powerUpMoving: boolean
+   info: List<String>
+   level: Level
+   powerUpFire: boolean
+   lives: int
+   yellowGumCount: int
+   blueGumCount: int
+   speed: double
+   firing: boolean
+   facingRight: boolean
+   bubbleExploded: int
+   state: PlayerState
+   bubbleBlown: int
+   moving: boolean
+}
+enum PlayerState << enumeration >> {
+  + PlayerState(): 
+  + values(): PlayerState[]
+  + valueOf(String): PlayerState
+}
+class PowerUp {
+  + PowerUp(double, double, Level): 
+  - active: boolean
+  - powerUpType: PowerUpType
+  - powerUpStrategy: PowerUpStrategy
+  # handleWallCollision(Wall): void
+  + update(): void
+  # handleEntityCollision(Entity): void
+  - removePowerUp(): void
+   powerUpStrategy: PowerUpStrategy
+   active: boolean
+   powerUpType: PowerUpType
+   info: List<String>
+}
+class PowerUpFactory {
+  + PowerUpFactory(): 
+  + createPowerUp(double, double, Level, PowerUpType): PowerUp
+}
+interface PowerUpStrategy << interface >> {
+  + applyPowerUp(Level): void
+}
+enum PowerUpType << enumeration >> {
+  + PowerUpType(): 
+  + values(): PowerUpType[]
+  + valueOf(String): PowerUpType
+}
+class PurpleGumStrategy {
+  + PurpleGumStrategy(): 
+  + applyPowerUp(Level): void
+}
+class PurpleRingStrategy {
+  + PurpleRingStrategy(): 
+  + applyPowerUp(Level): void
+}
+class RedCrossStrategy {
+  + RedCrossStrategy(): 
+  + applyPowerUp(Level): void
+}
+class RedRIngStrategy {
+  + RedRIngStrategy(): 
+  + applyPowerUp(Level): void
+}
+class SpeedShoesStrategy {
+  + SpeedShoesStrategy(): 
+  + applyPowerUp(Level): void
+}
+interface Walker << interface >> {
+  + walkerJump(Enemy): void
+  + walkerMove(Enemy): void
+}
+class YellowGumStrategy {
+  + YellowGumStrategy(): 
+  + applyPowerUp(Level): void
+}
+class ZenChan {
+  + ZenChan(double, double, Level): 
+  # jump(): void
+  + toString(): String
+  # moveAI(): void
+  - init(): void
+}
+
+AppleStrategy         -[#008200,dashed]-^  PowerUpStrategy      
+BlueGumStrategy       -[#008200,dashed]-^  PowerUpStrategy      
+BlueRingStrategy      -[#008200,dashed]-^  PowerUpStrategy      
+Bubble               "1" *-[#595959,plain]-> "state\n1" BubbleState          
+Bubble                -[#000082,plain]-^  Entity               
+BubbleState           +-[#820000,plain]-  Bubble               
+CherryStrategy        -[#008200,dashed]-^  PowerUpStrategy      
+Enemy                "1" *-[#595959,plain]-> "state\n1" EnemyState           
+Enemy                 -[#000082,plain]-^  Entity               
+Enemy                 -[#008200,dashed]-^  PlatformDetection    
+EnemyBubble          "1" *-[#595959,plain]-> "state\n1" EnemyBubbleState     
+EnemyBubble           -[#000082,plain]-^  Entity               
+EnemyBubbleState      +-[#820000,plain]-  EnemyBubble          
+EnemyState            +-[#820000,plain]-  Enemy                
+Entity               "1" *-[#595959,plain]-> "coordinate\n1" Coordinate           
+Entity                -[#595959,dashed]->  Coordinate           : "«create»"
+ExtraLifeStrategy     -[#008200,dashed]-^  PowerUpStrategy      
+Ghost                 -[#000082,plain]-^  Enemy                
+Ghost                 -[#595959,dashed]->  EnemyBubble          : "«create»"
+Ghost                 -[#008200,dashed]-^  PlatformDetection    
+Ghost                 -[#008200,dashed]-^  Walker               
+GlowingHeartStrategy  -[#008200,dashed]-^  PowerUpStrategy      
+GrapeStrategy         -[#008200,dashed]-^  PowerUpStrategy      
+Monster               -[#000082,plain]-^  Enemy                
+Player                -[#595959,dashed]->  Bubble               : "«create»"
+Player                -[#595959,dashed]->  Coordinate           : "«create»"
+Player                -[#000082,plain]-^  Entity               
+Player                -[#008200,dashed]-^  PlatformDetection    
+Player               "1" *-[#595959,plain]-> "state\n1" PlayerState          
+PlayerState           +-[#820000,plain]-  Player               
+PowerUp               -[#000082,plain]-^  Entity               
+PowerUp               -[#008200,dashed]-^  PlatformDetection    
+PowerUp              "1" *-[#595959,plain]-> "powerUpStrategy\n1" PowerUpStrategy      
+PowerUp              "1" *-[#595959,plain]-> "powerUpType\n1" PowerUpType          
+PowerUpFactory        -[#595959,dashed]->  AppleStrategy        : "«create»"
+PowerUpFactory        -[#595959,dashed]->  BlueGumStrategy      : "«create»"
+PowerUpFactory        -[#595959,dashed]->  BlueRingStrategy     : "«create»"
+PowerUpFactory        -[#595959,dashed]->  CherryStrategy       : "«create»"
+PowerUpFactory        -[#595959,dashed]->  ExtraLifeStrategy    : "«create»"
+PowerUpFactory        -[#595959,dashed]->  GlowingHeartStrategy : "«create»"
+PowerUpFactory        -[#595959,dashed]->  GrapeStrategy        : "«create»"
+PowerUpFactory        -[#595959,dashed]->  PowerUp              : "«create»"
+PowerUpFactory        -[#595959,dashed]->  PurpleGumStrategy    : "«create»"
+PowerUpFactory        -[#595959,dashed]->  PurpleRingStrategy   : "«create»"
+PowerUpFactory        -[#595959,dashed]->  RedCrossStrategy     : "«create»"
+PowerUpFactory        -[#595959,dashed]->  RedRIngStrategy      : "«create»"
+PowerUpFactory        -[#595959,dashed]->  SpeedShoesStrategy   : "«create»"
+PowerUpFactory        -[#595959,dashed]->  YellowGumStrategy    : "«create»"
+PowerUpType           +-[#820000,plain]-  PowerUp              
+PurpleGumStrategy     -[#008200,dashed]-^  PowerUpStrategy      
+PurpleRingStrategy    -[#008200,dashed]-^  PowerUpStrategy      
+RedCrossStrategy      -[#008200,dashed]-^  PowerUpStrategy      
+RedRIngStrategy       -[#008200,dashed]-^  PowerUpStrategy      
+SpeedShoesStrategy    -[#008200,dashed]-^  PowerUpStrategy      
+YellowGumStrategy     -[#008200,dashed]-^  PowerUpStrategy      
+ZenChan               -[#000082,plain]-^  Enemy                
+ZenChan               -[#008200,dashed]-^  PlatformDetection    
+ZenChan               -[#008200,dashed]-^  Walker               
+@enduml

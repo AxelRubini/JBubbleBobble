@@ -1,0 +1,132 @@
+@startuml
+
+!theme plain
+top to bottom direction
+skinparam linetype ortho
+skinparam groupInheritance false
+
+package level{
+        class EntityCollection {
+          - entities: List<Entity>
+          + getLevelMap(): Map<String, List<List<String>>>
+          + getEntities(): List<Entity>
+          + getEntitiesSortedByDistance(Entity): List<Entity>
+          + remove(Entity): void
+          + getNearBubbles(Entity): List<Bubble>
+          + getBubbles(): List<Bubble>
+          + getEnemies(): List<Enemy>
+          + add(Entity): void
+          + getPlayer(): Player
+          + getNearEnemiesCaughtByBubble(Enemy): List<Enemy>
+        }
+        class Level {
+          - entities: EntityCollection
+          - wallsCollection: WallCollection
+          - bubbleSpeedPowerUp: boolean
+          - extraLife: int
+          - levelNumber: int
+          - player: Player
+          - casualEqualsNumber(): boolean
+          + getLevelNumber(): int
+          + getWallsCollection(): WallCollection
+          + updateToView(Map<String, List<List<String>>>): void
+          + getPlayer(): Player
+          + gameOver(): void
+          - powerUpSpawn(): void
+          + getEntitiesCollection(): EntityCollection
+          + setPlayer(Player): void
+          + isBubbleSpeedPowerUp(): boolean
+          + setBubbleSpeedPowerUp(boolean): void
+          + update(Observable, Object): void
+          + createLevelMap(): Map<String, List<List<String>>>
+          + resetLevel(): void
+          + getLevel(): Level
+        }
+
+
+        class Wall {
+          - coordinate: Coordinate
+          - platform: boolean
+          - height: double
+          - width: double
+          - levelNumber: int
+          + getWidth(): double
+          + getHeight(): double
+          + getInfo(): List<String>
+          + getX(): double
+          + setHeight(double): void
+          + getCoordinate(): Coordinate
+          + getY(): double
+          + setWidth(double): void
+          + isPlatform(): boolean
+        }
+        class WallCollection {
+          - walls: List<Wall>
+          - spawnPoints: List<double[]>
+          - wallMatrix: List<Wall>[][]
+          + getSpawnPoint(): double[]
+          + getWalls(): List<Wall>
+          + getNearWalls(Entity): List<Wall>
+          + addWallMatrix(int, int, Wall): void
+          + getInfo(): List<List<String>>
+          + add(Wall): void
+          + addSpawnPoint(double, double): void
+        }
+}
+package entity{
+    class Entity {
+      # frames: List<Integer>
+      # velocityX: double
+      # height: double
+      # JUMP_STRENGTH: double
+      # width: double
+      # velocityY: double
+      # isMoving: boolean
+      # lastFrameTime: long
+      # level: Level
+      # currentFrame: int
+      # facingRight: boolean
+      # coordinate: Coordinate
+      + getCoordinate(): Coordinate
+      + move(double, double): void
+      + getY(): double
+      + getWidth(): double
+      + getVelocityX(): double
+      + getFrames(): List<Integer>
+      + getHeight(): double
+      # checkWallCollision(): void
+      + setFrame(int): void
+      # checkEntityCollision(): void
+      + setVelocityY(double): void
+      + getCurrentFrame(): int
+      # handleEntityCollision(Entity): void
+      + setCoordinate(Coordinate): void
+      + setCurrentFrame(int): void
+      + getVelocityY(): double
+      + setY(double): void
+      + getLevel(): Level
+      + setFrames(List<Integer>): void
+      # handlePacManEffect(): void
+      # updateFrame(): void
+      + getX(): double
+      + stopFall(): void
+      + update(): void
+      + setHeight(double): void
+      + isFacingRight(): boolean
+      + getInfo(): List<String>
+      # handleWallCollision(Wall): void
+      + setWidth(double): void
+      + setMoving(boolean): void
+      + setX(double): void
+      + setVelocityX(double): void
+      + isDie(): boolean
+    }
+
+
+ }
+
+Entity "1"<..*"1..*" EntityCollection:contains
+Wall "1"<..*"1..*" WallCollection:contains
+EntityCollection "1"<..*"1\t" Level:contains
+WallCollection "1"<..*"1" Level:contains
+@enduml

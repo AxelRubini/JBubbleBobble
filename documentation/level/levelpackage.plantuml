@@ -1,0 +1,181 @@
+@startuml
+
+!theme plain
+top to bottom direction
+skinparam linetype ortho
+skinparam groupInheritance true
+class Observable {
+  + notifyObservers(): void
+  + notifyObservers(Object): void
+  + deleteObserver(Observer): void
+  + deleteObservers(): void
+  # setChanged(): void
+  + addObserver(Observer): void
+  + countObservers(): int
+  # clearChanged(): void
+  + hasChanged(): boolean
+}
+interface Observer{
+  + update(Observable, Object): void
+}
+package level{
+        class EntityCollection {
+          - entities: List<Entity>
+          + getLevelMap(): Map<String, List<List<String>>>
+          + getEntities(): List<Entity>
+          + getEntitiesSortedByDistance(Entity): List<Entity>
+          + remove(Entity): void
+          + getNearBubbles(Entity): List<Bubble>
+          + getBubbles(): List<Bubble>
+          + getEnemies(): List<Enemy>
+          + add(Entity): void
+          + getPlayer(): Player
+          + getNearEnemiesCaughtByBubble(Enemy): List<Enemy>
+        }
+        class Level {
+          - entities: EntityCollection
+          - wallsCollection: WallCollection
+          - bubbleSpeedPowerUp: boolean
+          - extraLife: int
+          - levelNumber: int
+          - player: Player
+          - casualEqualsNumber(): boolean
+          + getLevelNumber(): int
+          + getWallsCollection(): WallCollection
+          + updateToView(Map<String, List<List<String>>>): void
+          + getPlayer(): Player
+          + gameOver(): void
+          - powerUpSpawn(): void
+          + getEntitiesCollection(): EntityCollection
+          + setPlayer(Player): void
+          + isBubbleSpeedPowerUp(): boolean
+          + setBubbleSpeedPowerUp(boolean): void
+          + update(Observable, Object): void
+          + createLevelMap(): Map<String, List<List<String>>>
+          + resetLevel(): void
+          + getLevel(): Level
+        }
+
+        class LevelFactory {
+          + createLevelFromFile(String): Level
+        }
+        class Wall {
+          - coordinate: Coordinate
+          - platform: boolean
+          - height: double
+          - width: double
+          - levelNumber: int
+          + getWidth(): double
+          + getHeight(): double
+          + getInfo(): List<String>
+          + getX(): double
+          + setHeight(double): void
+          + getCoordinate(): Coordinate
+          + getY(): double
+          + setWidth(double): void
+          + isPlatform(): boolean
+        }
+        class WallCollection {
+          - walls: List<Wall>
+          - spawnPoints: List<double[]>
+          - wallMatrix: List<Wall>[][]
+          + getSpawnPoint(): double[]
+          + getWalls(): List<Wall>
+          + getNearWalls(Entity): List<Wall>
+          + addWallMatrix(int, int, Wall): void
+          + getInfo(): List<List<String>>
+          + add(Wall): void
+          + addSpawnPoint(double, double): void
+        }
+}
+package entity{
+    abstract class  Entity {
+      # frames: List<Integer>
+      # velocityX: double
+      # height: double
+      # JUMP_STRENGTH: double
+      # width: double
+      # velocityY: double
+      # isMoving: boolean
+      # lastFrameTime: long
+      # level: Level
+      # currentFrame: int
+      # facingRight: boolean
+      # coordinate: Coordinate
+      + getCoordinate(): Coordinate
+      + move(double, double): void
+      + getY(): double
+      + getWidth(): double
+      + getVelocityX(): double
+      + getFrames(): List<Integer>
+      + getHeight(): double
+      # checkWallCollision(): void
+      + setFrame(int): void
+      # checkEntityCollision(): void
+      + setVelocityY(double): void
+      + getCurrentFrame(): int
+      # handleEntityCollision(Entity): void
+      + setCoordinate(Coordinate): void
+      + setCurrentFrame(int): void
+      + getVelocityY(): double
+      + setY(double): void
+      + getLevel(): Level
+      + setFrames(List<Integer>): void
+      # handlePacManEffect(): void
+      # updateFrame(): void
+      + getX(): double
+      + stopFall(): void
+      + update(): void
+      + setHeight(double): void
+      + isFacingRight(): boolean
+      + getInfo(): List<String>
+      # handleWallCollision(Wall): void
+      + setWidth(double): void
+      + setMoving(boolean): void
+      + setX(double): void
+      + setVelocityX(double): void
+      + isDie(): boolean
+    }
+        package characters{
+                class Ghost{}
+                class ZenChan{}
+                class Monster{}
+                abstract class Enemy{}
+                class Player{}
+         }
+         class PowerUp{}
+         package bubble{
+                class Bubble{}
+                class EnemyBubble{}
+         }
+ }
+LevelFactory ..>Level  : <<creates>>
+LevelFactory ..>Wall  : <<creates>>
+LevelFactory .up.>WallCollection  : <<creates>>
+LevelFactory .right>EntityCollection  : <<creates>>
+LevelFactory ..>Player  : <<creates>>
+LevelFactory ..>Ghost : <<creates>>
+LevelFactory ..>ZenChan : <<creates>>
+LevelFactory ..>Monster : <<creates>>
+Entity <|-up- Player
+Entity <|-right- Enemy
+Entity <|-right- PowerUp
+Entity <|-right- Bubble
+Entity <|-right- EnemyBubble
+Enemy <|-up- Ghost
+Enemy <|-up- ZenChan
+Enemy <|-up- Monster
+Level  ..> PowerUp:<<creates>>
+Player .down.> Bubble:<<creates>>
+Ghost .down.> EnemyBubble:<<creates>>
+Level --|> Observable
+Level .|> Observer
+WallCollection -[hidden]right-EntityCollection
+Wall -[hidden]down-EntityCollection
+characters -[hidden]down-EntityCollection
+PowerUp -[hidden]up-EntityCollection
+
+
+
+
+@enduml

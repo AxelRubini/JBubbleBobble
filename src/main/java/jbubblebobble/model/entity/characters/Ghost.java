@@ -5,7 +5,7 @@ import jbubblebobble.model.entity.bubble.EnemyBubble;
 import jbubblebobble.model.level.Level;
 import utility.Config;
 
-public class Ghost extends Enemy implements PlatformDetection,Walker{
+public class Ghost extends Enemy implements PlatformDetection, Walker {
     private long lastFireTime;
 
     public Ghost(double x, double y, Level level) {
@@ -13,26 +13,27 @@ public class Ghost extends Enemy implements PlatformDetection,Walker{
         init();
     }
 
-    private void init(){
+    private void init() {
         facingRight = true;
         state = EnemyState.FACING_RIGHT;
         speed = 1;
     }
 
-    public void fire(){
+    public void fire() {
         if (System.currentTimeMillis() - lastFireTime > Config.EnemyFireRate && !caughtByBubble) {
             double bubbleX = (facingRight) ? getX() + getWidth() : getX();
-            double bubbleY = getY() ;
+            double bubbleY = getY();
             EnemyBubble bubble = new EnemyBubble(bubbleX, bubbleY, level, facingRight);
             level.getEntitiesCollection().add(bubble);
             lastFireTime = System.currentTimeMillis();
         }
     }
+
     @Override
     protected void moveAI() {
         double playerY = level.getPlayer().getY();
         double ghostY = getY();
-        if (playerY==ghostY) {
+        if (playerY == ghostY) {
             fire();
         }
         walkerMove(this);
@@ -44,7 +45,7 @@ public class Ghost extends Enemy implements PlatformDetection,Walker{
     }
 
     @Override
-    protected void jump(){
+    protected void jump() {
         walkerJump(this);
     }
 

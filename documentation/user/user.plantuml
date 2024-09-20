@@ -1,0 +1,44 @@
+@startuml
+
+!theme plain
+top to bottom direction
+skinparam linetype ortho
+
+class User {
+  + User(String, String): 
+  - password: String
+  - name: String
+  - wonGames: int
+  - lostGames: int
+  - avatarPath: String
+  - highscore: int
+  - gamesPlayed: int
+  + setGamesPlayed(int): void
+  + getAvatarPath(): String
+  + getUsername(): String
+  + incrementGamesPlayed(): void
+  + getName(): String
+  + setLostGames(int): void
+  + getPassword(): String
+  + setWonGames(int): void
+  + getGamesPlayed(): int
+  + setHighScore(int): void
+  + getWonGames(): int
+  + getLostGames(): int
+  + getHighScore(): int
+  + setAvatarPath(String): void
+}
+class UserManager {
+  + UserManager(): 
+  - users: Map<String, User>
+  - filePath: String
+  + getUser(String): User
+  + authenticate(String, String): boolean
+  + updateUser(User): void
+  - saveUserToFile(User): void
+  - loadUsersFromFile(String): void
+}
+
+UserManager  -[#595959,dashed]->  User        : <<creates>>
+UserManager "1" *-[#595959,plain]-> "users\n*" User        
+@enduml

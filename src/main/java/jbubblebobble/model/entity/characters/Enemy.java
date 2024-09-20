@@ -223,8 +223,6 @@ public abstract class Enemy extends Entity implements PlatformDetection {
     protected void jump() {
     }
 
-    ;
-
     /**
      * Is caught by bubble boolean.
      *
@@ -311,8 +309,7 @@ public abstract class Enemy extends Entity implements PlatformDetection {
             if (getX() < 0) setX(Config.SCREEN_WIDTH);
             if (getY() < 0) setY(Config.SCREEN_HEIGHT);
         } else {
-            boolean isOnPlatform = level.getWallsCollection().getNearWalls(this).stream()
-                    .anyMatch(wall -> wall.isPlatform() && CollisionHandler.isCollidingWithTopOfWall(this, wall) && !CollisionHandler.isCollidingWithSideOfWall(this, wall));
+            boolean isOnPlatform = level.getWallsCollection().getNearWalls(this).stream().anyMatch(wall -> wall.isPlatform() && CollisionHandler.isCollidingWithTopOfWall(this, wall) && !CollisionHandler.isCollidingWithSideOfWall(this, wall));
 
             if (isOnPlatform) {
                 setVelocityY(0);
