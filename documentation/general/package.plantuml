@@ -1,0 +1,276 @@
+@startuml
+
+!theme plain
+top to bottom direction
+skinparam linetype ortho
+skinparam groupInheritance 3
+
+
+
+
+
+package view{
+class BubbleView
+class EnemyBubbleView
+class Flyweight
+
+class GhostView
+
+
+class LevelView
+
+class MonsterView
+class PlayerView
+class PowerUpView
+
+interface Renderable << interface >>
+class WallView
+class ZenChanView
+}
+package controller{
+    package applicationstate{
+           class HighScoreState
+              class MainMenuState
+              class LoseState
+              class WinState
+              class LogInState
+                class ProfileState
+                class SelectAvatarState
+                class PlayState
+    }
+    package gamestate{
+        class GameOverState
+        class PauseState
+        class ResumeState
+        class StartState
+    }
+    package command{
+        class FireCommand
+        class JumpCommand
+        class MoveLeftCommand
+        class MoveRightCommand
+        class PauseCommand
+        class ResumeCommand
+    }
+    interface Command << interface >>
+    interface ApplicationState << interface >>
+    interface GameState << interface >>
+    class WinController
+    class SelectAvatarController
+    class LogInController
+    class LoseController
+    class MenuController
+    class ProfileController
+    class HighScoreController
+    class JBubbleBobble
+    class LevelController
+    class GameManager
+    class ApplicationContext
+    class AudioManager
+}
+
+package model{
+            class Coordinate
+            class User
+            class UserManager
+            package level{
+            class LevelFactory
+            class EntityCollection
+            class Level
+            class Wall
+            class WallCollection
+            }
+        package entity{
+        interface PlatformDetection << interface >>
+            class Bubble
+            class Enemy
+            class EnemyBubble
+            class Entity
+            class Ghost
+            class Monster
+            class Player
+            class ZenChan
+            interface Walker << interface >>
+
+        package powerup{
+
+            class PowerUp
+            class PowerUpFactory
+
+                package strategy{
+                    interface PowerUpStrategy
+                    class AppleStrategy
+                    class BlueGumStrategy
+                    class BlueRingStrategy
+                    class CherryStrategy
+                    class ExtraLifeStrategy
+                    class GlowingHeartStrategy
+                    class GrapeStrategy
+                    class PowerUpStrategy
+                    class PurpleGumStrategy
+                    class PurpleRingStrategy
+                    class RedCrossStrategy
+                    class RedRIngStrategy
+                    class SpeedShoesStrategy
+                    class YellowGumStrategy
+                }
+            }
+        }
+        class PhysicsEngine
+        class CollisionHandler
+   }
+
+AppleStrategy           -[#008200,dashed]--^  PowerUpStrategy
+ApplicationContext     "1" *-[#595959,plain]--> "state\n1" ApplicationState
+ApplicationContext     "1" *-[#595959,plain]--> "user\n1" User
+ApplicationContext     "1" *-[#595959,plain]--> "userManager\n1" UserManager
+BlueGumStrategy         -[#008200,dashed]--^  PowerUpStrategy
+BlueRingStrategy        -[#008200,dashed]--^  PowerUpStrategy
+Bubble                  -[#000082,plain]--^  Entity
+CherryStrategy          -[#008200,dashed]--^  PowerUpStrategy
+Enemy                   -[#000082,plain]--^  Entity
+Enemy                   -[#008200,dashed]--^  PlatformDetection
+EnemyBubble             -[#000082,plain]--^  Entity
+Entity                 "1" *-[#595959,plain]--> "coordinate\n1" Coordinate
+Entity                  -[#595959,dashed]-->  Coordinate             : "«create»"
+Entity                 "1" *-[#595959,plain]--> "level\n1" Level
+EntityCollection       "1" *-[#595959,plain]--> "entities\n*" Entity
+ExtraLifeStrategy       -[#008200,dashed]--^  PowerUpStrategy
+FireCommand             -[#008200,dashed]--^  Command
+FireCommand             *-[#595959,plain]--  Player
+GameManager             -[#595959,dashed]-->  GameOverState          : "«create»"
+GameManager            "1" *-[#595959,plain]--> "state\n1" GameState
+GameManager            "1" *-[#595959,plain]-> "levelController\n1" LevelController        
+GameManager            "1" *-[#595959,plain]-> "levelView\n1" LevelView              
+GameManager             -[#595959,dashed]->  LoseState              : "«create»"
+GameManager             -[#595959,dashed]->  PauseState             : "«create»"
+GameManager             -[#595959,dashed]->  ResumeState            : "«create»"
+GameManager             -[#595959,dashed]->  StartState             : "«create»"
+GameManager             -[#595959,dashed]->  WinState               : "«create»"
+GameOverState           -[#008200,dashed]--^  GameState
+Ghost                   -[#000082,plain]-^  Enemy                  
+Ghost                   -[#595959,dashed]->  EnemyBubble            : "«create»"
+Ghost                   -[#008200,dashed]-^  PlatformDetection      
+Ghost                   -[#008200,dashed]-^  Walker                 
+GlowingHeartStrategy    -[#008200,dashed]-^  PowerUpStrategy        
+GrapeStrategy           -[#008200,dashed]-^  PowerUpStrategy        
+HighScoreController     -[#595959,dashed]->  MainMenuState          : "«create»"
+HighScoreState          -[#008200,dashed]-^  ApplicationState       
+JBubbleBobble           -[#595959,dashed]->  LogInState             : "«create»"
+JumpCommand             -[#008200,dashed]-^  Command                
+JumpCommand            "1" *-[#595959,plain]- Player
+Level                  "1" *-[#595959,plain]-> "entities\n1" EntityCollection       
+Level                  "1" *-[#595959,plain]-> "player\n1" Player                 
+Level                  "1" *-[#595959,plain]-> "wallsCollection\n1" WallCollection         
+LevelController        "1" *-[#595959,plain]-> "moveLeftCommand\n1" Command                
+LevelController         -[#595959,dashed]->  FireCommand            : "«create»"
+LevelController         -[#595959,dashed]->  JumpCommand            : "«create»"
+LevelController        "1" *-[#595959,plain]-> "level\n1" Level                  
+LevelController        "1" *-[#595959,plain]-> "levelView\n1" LevelView              
+LevelController         -[#595959,dashed]->  MoveLeftCommand        : "«create»"
+LevelController         -[#595959,dashed]->  MoveRightCommand       : "«create»"
+LevelController         -[#595959,dashed]->  PauseCommand           : "«create»"
+LevelController         -[#595959,dashed]->  ResumeCommand          : "«create»"
+LevelFactory            -[#595959,dashed]->  EntityCollection       : "«create»"
+LevelFactory            -[#595959,dashed]->  Ghost                  : "«create»"
+LevelFactory            -[#595959,dashed]->  Level                  : "«create»"
+LevelFactory            -[#595959,dashed]->  Monster                : "«create»"
+LevelFactory            -[#595959,dashed]->  Wall                   : "«create»"
+LevelFactory            -[#595959,dashed]->  WallCollection         : "«create»"
+LevelFactory            -[#595959,dashed]->  ZenChan                : "«create»"
+LevelView               -[#595959,dashed]->  BubbleView             : "«create»"
+LevelView               -[#595959,dashed]->  EnemyBubbleView        : "«create»"
+LevelView               -[#595959,dashed]->  GhostView              : "«create»"
+LevelView               -[#595959,dashed]->  MonsterView            : "«create»"
+LevelView               -[#595959,dashed]->  PlayerView             : "«create»"
+LevelView               -[#595959,dashed]->  PowerUpView            : "«create»"
+LevelView               -[#008200,dashed]-^  Renderable             
+LevelView               -[#595959,dashed]->  WallView               : "«create»"
+LevelView               -[#595959,dashed]->  ZenChanView            : "«create»"
+LogInController         -[#595959,dashed]->  MainMenuState          : "«create»"
+LogInController        "1" *-[#595959,plain]-> "userManager\n1" UserManager            
+LogInController         -[#595959,dashed]->  UserManager            : "«create»"
+LogInState              -[#008200,dashed]-^  ApplicationState       
+LoseController          -[#595959,dashed]->  MainMenuState          : "«create»"
+LoseState               -[#008200,dashed]-^  ApplicationState       
+MainMenuState           -[#008200,dashed]-^  ApplicationState       
+MenuController          -[#595959,dashed]->  HighScoreState         : "«create»"
+MenuController          -[#595959,dashed]->  PlayState              : "«create»"
+MenuController          -[#595959,dashed]->  ProfileState           : "«create»"
+Monster                 -[#000082,plain]-^  Enemy                  
+MoveLeftCommand         -[#008200,dashed]-^  Command                
+MoveLeftCommand        "1" *-[#595959,plain]-  Player
+MoveRightCommand        -[#008200,dashed]-^  Command                
+MoveRightCommand       "1" *-[#595959,plain]-  Player
+PauseCommand            -[#008200,dashed]-^  Command                
+PauseState              -[#008200,dashed]-^  GameState              
+PlayState               -[#008200,dashed]-^  ApplicationState       
+Player                  -[#595959,dashed]->  Bubble                 : "«create»"
+Player                  -[#595959,dashed]->  Coordinate             : "«create»"
+Player                  -[#000082,plain]-^  Entity                 
+Player                  -[#008200,dashed]-^  PlatformDetection      
+PlayerView             "1" *-[#595959,plain]-> "levelView\n1" LevelView              
+PowerUp                 -[#000082,plain]-^  Entity                 
+PowerUp                 -[#008200,dashed]-^  PlatformDetection      
+PowerUp                "1" *-[#595959,plain]-> "powerUpStrategy\n1" PowerUpStrategy        
+PowerUpFactory          -[#595959,dashed]->  AppleStrategy          : "«create»"
+PowerUpFactory          -[#595959,dashed]->  BlueGumStrategy        : "«create»"
+PowerUpFactory          -[#595959,dashed]->  BlueRingStrategy       : "«create»"
+PowerUpFactory          -[#595959,dashed]->  CherryStrategy         : "«create»"
+PowerUpFactory          -[#595959,dashed]->  ExtraLifeStrategy      : "«create»"
+PowerUpFactory          -[#595959,dashed]->  GlowingHeartStrategy   : "«create»"
+PowerUpFactory          -[#595959,dashed]->  GrapeStrategy          : "«create»"
+PowerUpFactory          -[#595959,dashed]->  PowerUp                : "«create»"
+PowerUpFactory          -[#595959,dashed]->  PurpleGumStrategy      : "«create»"
+PowerUpFactory          -[#595959,dashed]->  PurpleRingStrategy     : "«create»"
+PowerUpFactory          -[#595959,dashed]->  RedCrossStrategy       : "«create»"
+PowerUpFactory          -[#595959,dashed]->  RedRIngStrategy        : "«create»"
+PowerUpFactory          -[#595959,dashed]->  SpeedShoesStrategy     : "«create»"
+PowerUpFactory          -[#595959,dashed]->  YellowGumStrategy      : "«create»"
+ProfileController       -[#595959,dashed]->  MainMenuState          : "«create»"
+ProfileController       -[#595959,dashed]->  SelectAvatarState      : "«create»"
+ProfileState            -[#008200,dashed]-^  ApplicationState       
+PurpleGumStrategy       -[#008200,dashed]-^  PowerUpStrategy        
+PurpleRingStrategy      -[#008200,dashed]-^  PowerUpStrategy        
+RedCrossStrategy        -[#008200,dashed]-^  PowerUpStrategy        
+RedRIngStrategy         -[#008200,dashed]-^  PowerUpStrategy        
+ResumeCommand           -[#008200,dashed]-^  Command                
+ResumeState             -[#008200,dashed]-^  GameState              
+SelectAvatarController  -[#595959,dashed]->  ProfileState           : "«create»"
+SelectAvatarState       -[#008200,dashed]-^  ApplicationState       
+SpeedShoesStrategy      -[#008200,dashed]-^  PowerUpStrategy        
+StartState              -[#008200,dashed]-^  GameState              
+StartState              -[#595959,dashed]->  LevelController        : "«create»"
+StartState              -[#595959,dashed]->  LevelView              : "«create»"
+UserManager            "1" *-[#595959,plain]-> "users\n*" User                   
+UserManager             -[#595959,dashed]->  User                   : "«create»"
+Wall                    -[#595959,dashed]->  Coordinate             : "«create»"
+Wall                   "1" *-[#595959,plain]-> "coordinate\n1" Coordinate             
+WallCollection         "1" *-[#595959,plain]-> "walls\n*" Wall                   
+WinController           -[#595959,dashed]->  MainMenuState          : "«create»"
+WinState                -[#008200,dashed]-^  ApplicationState       
+YellowGumStrategy       -[#008200,dashed]-^  PowerUpStrategy        
+ZenChan                 -[#000082,plain]-^  Enemy                  
+ZenChan                 -[#008200,dashed]-^  PlatformDetection      
+ZenChan                 -[#008200,dashed]-^  Walker
+BubbleView -[hidden]down->WallView
+WallView  -[hidden]down->PlayerView
+PlayerView -[hidden]down->PowerUpView
+PowerUpView -[hidden]down->EnemyBubbleView
+EnemyBubbleView -[hidden]down->GhostView
+GhostView -[hidden]down->MonsterView
+MonsterView -[hidden]down->ZenChanView
+ZenChanView -[hidden]down->BubbleView
+LevelView -[hidden]down-->WinState
+StartState -[hidden]down-->WinState
+WinState -[hidden]down-->LoseState
+LoseState -[hidden]down-->PauseState
+PauseState -[hidden]down-->ResumeState
+ResumeState -[hidden]down-->GameOverState
+PauseCommand -[hidden]down->ResumeCommand
+FireCommand -[hidden]down-> JumpCommand
+JumpCommand -[hidden]down->PauseCommand
+MoveLeftCommand -[hidden]down->MoveRightCommand
+model -[hidden]up->controller
+
+@enduml
