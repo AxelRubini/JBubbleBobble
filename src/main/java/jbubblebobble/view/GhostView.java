@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class GhostView implements Renderable {
+public class GhostView{
     
     private static Map<String, List<String>> ghostImageMap;
 
@@ -33,13 +33,5 @@ public class GhostView implements Renderable {
         return ghostImageMap;
     }
 
-    //    public static void render(GraphicsContext gc,List<List<String>> data){
-//        for (List<String> ghostData : data){
-//            List<String> frames = ghostImageMap.get(ghostData.get(2));
-//            Image image = Flyweight.getImage(frames.get(Integer.parseInt(ghostData.get(3))));
-//            gc.drawImage(image,Double.parseDouble(ghostData.get(0)), Double.parseDouble(ghostData.get(1)),20,20);
-//        }
-//
-//    }
     
 }

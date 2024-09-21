@@ -1,0 +1,85 @@
+@startuml
+
+!theme plain
+top to bottom direction
+skinparam linetype ortho
+
+class BubbleView {
+  - bubbleImageMap: Map<String, List<String>>
+  - initializeBubbleImageMap(): void
+  + getBubbleImageMap(): Map<String, List<String>>
+}
+class EnemyBubbleView {
+  - enemyBubbleImageMap: Map<String, List<String>>
+  - initializeImageMap(): void
+  + getEnemyBubbleImageMap(): Map<String, List<String>>
+}
+class Flyweight {
+  - imageMap: Map<String, Image>
+  + getImage(String): Image
+}
+class GhostView {
+  - ghostImageMap: Map<String, List<String>>
+  - initializeImageMap(): void
+  + getGhostImageMap(): Map<String, List<String>>
+}
+class LevelView {
+  - score: int
+  - lifesLabel: Label
+  - scoreLabel: Label
+  - customFont: Font
+  + getScoreLabel(): Node
+  + render(Map<String, List<List<String>>>): void
+  + getLifesLabel(): Node
+  + update(Observable, Object): void
+}
+class MonsterView {
+  - monsterImageMap: Map<String, List<String>>
+  - initializeImageMap(): void
+  + getMonsterImageMap(): Map<String, List<String>>
+}
+class PlayerView {
+  - levelView: LevelView
+  - playerImageMap: Map<String, List<String>>
+  - frameIndex: int
+  - lastFrameTime: long
+  + getPlayerImageMap(): Map<String, List<String>>
+  - initializePlayerImageMap(): void
+}
+class PowerUpView {
+  - powerUpImageMap: Map<String, List<String>>
+  - initializeImageMap(): void
+  + getPowerUpImageMap(): Map<String, List<String>>
+}
+interface Renderable << interface >> {
+  + powerUpRender(GraphicsContext, Map<String, List<String>>, List<List<String>>): void
+  + wallRender(GraphicsContext, List<List<String>>): void
+  + entityRender(GraphicsContext, Map<String, List<String>>, List<List<String>>): void
+}
+class WallView {
+  - wallImageMap: Map<String, List<String>>
+  - initializeImageMap(): void
+  + getWallImageMap(): Map<String, List<String>>
+}
+class ZenChanView {
+  - zenChanImageMap: Map<String, List<String>>
+  - initializeImageMap(): void
+  + getZenChanImageMap(): Map<String, List<String>>
+}
+
+LevelView        -[#595959,dashed]->  BubbleView      : "«create»"
+LevelView        -[#595959,dashed]->  EnemyBubbleView : "«create»"
+LevelView        -[#595959,dashed]->  GhostView       : "«create»"
+LevelView        -[#595959,dashed]->  MonsterView     : "«create»"
+LevelView        -[#595959,dashed]->  PlayerView      : "«create»"
+LevelView        -[#595959,dashed]->  PowerUpView     : "«create»"
+LevelView        -[#008200,dashed]up-^  Renderable
+LevelView        -[#595959,dashed]->  WallView        : "«create»"
+LevelView        -[#595959,dashed]->  ZenChanView     : "«create»"
+PlayerView      "1" *-[#595959,plain]-> "levelView\n1" LevelView
+Renderable       <.. Flyweight : "«use»"
+BubbleView      "1" *-[hidden]down->    EnemyBubbleView
+GhostView       "1" *-[hidden]down->    MonsterView
+PlayerView      "1" *-[hidden]down->    PowerUpView
+WallView        "1" *-[hidden]down->    ZenChanView
+@enduml

@@ -1,0 +1,326 @@
+@startuml
+
+!theme plain
+top to bottom direction
+skinparam linetype ortho
+package controller{
+class ApplicationContext {
+  - userManager: UserManager
+  - instance: ApplicationContext
+  - state: ApplicationState
+  - user: User
+  - avatars: Map<String, String>
+  + getUserManager(): UserManager
+  + setUser(User): void
+  + getAvatars(): Map<String, String>
+  + setUserManager(UserManager): void
+  + getUser(): User
+  + getInstance(): ApplicationContext
+  + setState(ApplicationState): void
+  + getState(): ApplicationState
+  + getAvatar(String): String
+}
+interface ApplicationState << interface >> {
+  + enterState(): void
+}
+
+class AudioManager {
+  - instance: AudioManager
+  - themeClip: Clip
+  + stopTheme(): void
+  + play(String): void
+  + update(Observable, Object): void
+  + getInstance(): AudioManager
+  + playTheme(String): void
+}
+interface Command << interface >> {
+  + execute(): void
+}
+
+class GameManager {
+  - activeLevel: int
+  - levelController: LevelController
+  - stage: Stage
+  - instance: GameManager
+  - state: GameState
+  - levelView: LevelView
+  + setStage(Stage): void
+  + pauseGame(): void
+  + setLevelController(LevelController): void
+  + resetGame(): void
+  + resumeGame(): void
+  + getLevelView(): LevelView
+  + startGame(Stage): void
+  + getPath(): String
+  + setLevelView(LevelView): void
+  + getLevelController(): LevelController
+  + setState(GameState): void
+  + getStage(): Stage
+  + changeLevel(Stage): boolean
+  + endGame(boolean): void
+  + getInstance(): GameManager
+}
+
+interface GameState << interface >> {
+  + enterState(): void
+  + exitState(): void
+}
+class HighScoreController {
+  - menuButton: Button
+  - playersHighScores: ObservableList<PlayerScore>
+  - tableView: TableView<PlayerScore>
+  - score: TableColumn<PlayerScore, String>
+  - player: TableColumn<PlayerScore, String>
+  - fillPlayersHighScores(): List<PlayerScore>
+  - initialize(): void
+  - returnToMenu(): void
+}
+
+class JBubbleBobble {
+  + main(String[]): void
+  + start(Stage): void
+}
+
+class LevelController {
+  - level: Level
+  - resumeCommand: Command
+  - jumpCommand: Command
+  - UPDATE_INTERVAL: double
+  - levelView: LevelView
+  - timer: AnimationTimer
+  - moveLeftCommand: Command
+  - fireCommand: Command
+  - keys: boolean[]
+  - pauseCommand: Command
+  - moveRightCommand: Command
+  - levelStartTime: long
+  + stopGameLoop(): void
+  + getScoreLabel(): Node
+  - updateGame(double): void
+  - setupKeyHandlers(): void
+  + restartGameLoop(): void
+  - handleKeyPressed(KeyEvent): void
+  - handleKeyReleased(KeyEvent): void
+  - saveUser(): void
+  - checkEndOfLevel(): void
+  - checkEndOfGame(): void
+  - startGameLoop(): void
+  - updateEntities(): void
+}
+
+class LogInController {
+  - loginButton: Button
+  - userManager: UserManager
+  - passwordBox: PasswordField
+  - userNameBox: TextField
+  - errorText: Text
+  - handleLogin(): void
+  + initialize(): void
+}
+
+class LoseController {
+  - LoseView: ImageView
+  - handleKeyPress(KeyEvent): void
+  + initialize(): void
+  + returnToMenu(): void
+}
+
+
+class MenuController {
+  - openProfile: Button
+  - openHighScore: Button
+  - closeApplication: Button
+  - btnPlay: Button
+  - showProfile(): void
+  - startGame(): void
+  + initialize(): void
+  - showHighScore(): void
+}
+
+
+
+
+class ProfileController {
+  - avatar: ImageView
+  - wonGame: Label
+  - highscore: Label
+  - changeAvatar: Label
+  - lostGame: Label
+  - games: Label
+  - menu: Button
+  - name: Label
+  - handleMenu(): void
+  + initialize(): void
+}
+
+
+
+class SelectAvatarController {
+  - avatarPreView: ImageView
+  - menu: Button
+  - comboBox: ComboBox<String>
+  - actualAvatar: String
+  + initialize(): void
+}
+
+
+class WinController {
+  - winView: ImageView
+  - handleKeyPress(KeyEvent): void
+  + returnToMenu(): void
+  + initialize(): void
+}
+
+package applicationstate{
+
+    class WinState {
+      - stage: Stage
+      + enterState(): void
+    }
+    class SelectAvatarState {
+      - stage: Stage
+      + enterState(): void
+    }
+
+    class ProfileState {
+      - stage: Stage
+      + enterState(): void
+    }
+    class PlayState {
+      - Stage: Stage
+      + enterState(): void
+    }
+    class MainMenuState {
+      - stage: Stage
+      + enterState(): void
+    }
+    class LoseState {
+      - stage: Stage
+      + enterState(): void
+    }
+    class LogInState {
+      - stage: Stage
+      + enterState(): void
+    }
+    class HighScoreState {
+      - stage: Stage
+      + enterState(): void
+    }
+}
+package command{
+    class MoveLeftCommand {
+      - player: Player
+      + execute(): void
+    }
+    class MoveRightCommand {
+      - player: Player
+      + execute(): void
+    }
+    class ResumeCommand {
+      + execute(): void
+    }
+    class PauseCommand {
+      + execute(): void
+    }
+    class FireCommand {
+      - player: Player
+      + execute(): void
+    }
+    class JumpCommand {
+      - player: Player
+      + execute(): void
+    }
+}
+package gamestate{
+    class PauseState {
+      + enterState(): void
+      + exitState(): void
+    }
+    class StartState {
+      - stage: Stage
+      + enterState(): void
+      + exitState(): void
+    }
+    class ResumeState {
+      + exitState(): void
+      + enterState(): void
+    }
+    class GameOverState {
+      + exitState(): void
+      + enterState(): void
+    }
+}
+}
+class LevelView {
+  - customFont: Font
+  - lifesLabel: Label
+  - scoreLabel: Label
+  - score: int
+  + update(Observable, Object): void
+  + getLifesLabel(): Node
+  + render(Map<String, List<List<String>>>): void
+  + getScoreLabel(): Node
+}
+ApplicationContext     "1" *-[#595959,plain]> "state\n1" ApplicationState
+FireCommand             -[#008200,dashed]-^  Command
+GameManager             -[#595959,dashed]->  GameOverState          : "«create»"
+GameManager            "1" *-[#595959,plain]-> "state\n1" GameState
+GameManager            "1" *-[#595959,plain]up----> "levelController\n1" LevelController
+GameManager            "1" *-[#595959,plain]down---> "levelView\n1" LevelView
+GameManager             -[#595959,dashed]-->  LoseState              : "«create»"
+GameManager             -[#595959,dashed]-->  PauseState             : "«create»"
+GameManager             -[#595959,dashed]---->  ResumeState            : "«create»"
+GameManager             -[#595959,dashed]---->  StartState             : "«create»"
+GameManager             -[#595959,dashed]-->  WinState               : "«create»"
+GameOverState           -[#008200,dashed]-^  GameState
+HighScoreController     -[#595959,dashed]>  MainMenuState          : "«create»"
+HighScoreState          -[#008200,dashed]-|>  ApplicationState
+JBubbleBobble           -[#595959,dashed]up->  LogInState             : "«create»"
+JumpCommand             -[#008200,dashed]-^  Command
+LevelController        "1" *-[#595959,plain]-> Command
+LevelController         -[#595959,dashed]->  FireCommand            : "«create»"
+LevelController         -[#595959,dashed]---->  JumpCommand            : "«create»"
+LevelController         -[#595959,dashed]->  MoveLeftCommand        : "«create»"
+LevelController         -[#595959,dashed]->  MoveRightCommand       : "«create»"
+LevelController         -[#595959,dashed]->  PauseCommand           : "«create»"
+LevelController         -[#595959,dashed]->  ResumeCommand          : "«create»"
+LogInController         -[#595959,dashed]->  MainMenuState          : "«create»"
+LogInState              -[#008200,dashed]-^  ApplicationState
+LoseController          -[#595959,dashed]->  MainMenuState          : "«create»"
+LoseState               -[#008200,dashed]-^  ApplicationState
+MainMenuState           -[#008200,dashed]-^  ApplicationState
+MenuController          -[#595959,dashed]-->  HighScoreState         : "«create»"
+MenuController          -[#595959,dashed]-->  PlayState              : "«create»"
+MenuController          -[#595959,dashed]-->  ProfileState           : "«create»"
+MoveLeftCommand         -[#008200,dashed]-^  Command
+MoveRightCommand        -[#008200,dashed]-^  Command
+PauseCommand            -[#008200,dashed]-^  Command
+PauseState              -[#008200,dashed]-^  GameState
+PlayState               -[#008200,dashed]-^  ApplicationState
+ProfileController       -[#595959,dashed]-->  MainMenuState          : "«create»"
+ProfileController       -[#595959,dashed]-->  SelectAvatarState      : "«create»"
+ProfileState            -[#008200,dashed]-^  ApplicationState
+ResumeCommand           -[#008200,dashed]-^  Command
+ResumeState             -[#008200,dashed]-^  GameState
+SelectAvatarController  -[#595959,dashed]-->  ProfileState           : "«create»"
+SelectAvatarState       -[#008200,dashed]-^  ApplicationState
+StartState              -[#008200,dashed]-^  GameState
+StartState              -[#595959,dashed]->  LevelController        : "«create»"
+StartState              -[#595959,dashed]down>  LevelView              : "«create»"
+WinController           -[#595959,dashed]->  MainMenuState          : "«create»"
+WinState                -[#008200,dashed]-^  ApplicationState
+LevelController         -[hidden]up->  ApplicationState
+LevelController         -[hidden]right->  GameManager
+gamestate   -[hidden]down->  LevelView
+GameOverState           -[hidden]down->  LevelView
+LevelController        "1" *-[#595959,plain]---> "levelView\n1" LevelView
+LevelView -[hidden]up----->StartState
+LevelView -[hidden]up----->WinState
+LevelView -[hidden]up----->LoseState
+LevelView -[hidden]up----->PauseState
+PlayState .down----->GameManager:"«create»"
+JumpCommand -[hidden]down->PauseCommand
+
+
+
+@enduml
