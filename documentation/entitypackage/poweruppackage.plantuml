@@ -13,27 +13,53 @@ skinparam class {
 
 }
 
-class Entity {
-  # frames: List<Integer>
-  # velocityX: double
-  # height: double
-  # width: double
-  # velocityY: double
-  # isMoving: boolean
-  # level: Level
-  # currentFrame: int
-  # facingRight: boolean
-  # coordinate: Coordinate
-  + move(double, double): void
-  # checkWallCollision(): void
-  # checkEntityCollision(): void
-  # handlePacManEffect(): void
-  # updateFrame(): void
-  + stopFall(): void
-  + update(): void
-  # {abstract}handleWallCollision(Wall): void
-  # {abstract}handleEntityCollision(Entity): void
-}
+    abstract class  Entity <<abstract>> {
+      # frames: List<Integer>
+      # velocityX: double
+      # height: double
+      # JUMP_STRENGTH: double
+      # width: double
+      # velocityY: double
+      # isMoving: boolean
+      # lastFrameTime: long
+      # level: Level
+      # currentFrame: int
+      # facingRight: boolean
+      # coordinate: Coordinate
+      + getCoordinate(): Coordinate
+      + move(double, double): void
+      + getY(): double
+      + getWidth(): double
+      + getVelocityX(): double
+      + getFrames(): List<Integer>
+      + getHeight(): double
+      # checkWallCollision(): void
+      + setFrame(int): void
+      # checkEntityCollision(): void
+      + setVelocityY(double): void
+      + getCurrentFrame(): int
+      # handleEntityCollision(Entity): void
+      + setCoordinate(Coordinate): void
+      + setCurrentFrame(int): void
+      + getVelocityY(): double
+      + setY(double): void
+      + getLevel(): Level
+      + setFrames(List<Integer>): void
+      # handlePacManEffect(): void
+      # updateFrame(): void
+      + getX(): double
+      + stopFall(): void
+      + update(): void
+      + setHeight(double): void
+      + isFacingRight(): boolean
+      + getInfo(): List<String>
+      # handleWallCollision(Wall): void
+      + setWidth(double): void
+      + setMoving(boolean): void
+      + setX(double): void
+      + setVelocityX(double): void
+      + isDie(): boolean
+    }
 class Observable {
   + notifyObservers(): void
   + notifyObservers(Object): void
@@ -61,7 +87,7 @@ package PowerUpPackage {
     class PowerUpFactory {
         + createPowerUp(double, double, Level, PowerUpType): PowerUp
     }
-    interface PowerUpStrategy {
+    interface PowerUpStrategy <<interface>> {
         + applyPowerUp(Level): void
     }
     enum PowerUpType {

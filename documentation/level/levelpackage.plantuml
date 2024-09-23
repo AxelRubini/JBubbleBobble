@@ -89,7 +89,7 @@ package level{
         }
 }
 package entity{
-    abstract class  Entity {
+    abstract class  Entity <<abstract>> {
       # frames: List<Integer>
       # velocityX: double
       # height: double
@@ -140,7 +140,7 @@ package entity{
                 class Ghost{}
                 class ZenChan{}
                 class Monster{}
-                abstract class Enemy{}
+                abstract class Enemy <<abstract>>{}
                 class Player{}
          }
          class PowerUp{}

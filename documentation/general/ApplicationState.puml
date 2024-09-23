@@ -1,0 +1,46 @@
+@startuml
+scale 350 width
+scale 400 height
+
+
+state Initializing {
+  [*] --> LoadResources
+}
+
+state Ready {
+}
+
+state LogInSreen{
+}
+
+state MenuScreen{
+    [*] --> ProfileScreen : onProfile()
+    ProfileScreen --> MenuScreen: onBack()
+    ProfileScreen --> SelectAvatarScreen : changeAvatar()
+    [*] --> HighScoreScreen : onHighScore()
+    HighScoreScreen -->MenuScreen: onBack()
+    SelectAvatarScreen --> ProfileScreen : onBack()
+    [*] --> Play : onPlay()
+    [*] --> WinState: onWin()
+    [*] --> LoseState: onLose()
+    WinState --> MenuScreen: onMenu()
+    LoseState --> MenuScreen: onMenu()
+    Exit --> [*]: onExit()
+
+}
+
+state Gaming{
+    [*] --> StartState
+    StartState --> Pause : onPause()
+    Pause --> Resume: onResume()
+    Resume --> Pause: onPause()
+    Resume --> GameOver: onGameOver()
+    StartState --> GameOver: onGameOver()
+}
+GameOver --> LoseState: onMenu()
+GameOver --> WinState: onMenu()
+Play --> Gaming : onPlay()
+LoadResources --> Ready: onResourcesLoaded()
+Ready --> LogInSreen: onReady()
+LogInSreen --> MenuScreen: onLogIn()
+@enduml

@@ -1,0 +1,41 @@
+@startuml
+actor Player
+
+Player -> Game: start()
+activate Game
+
+Game -> LevelController: initializeLevel()
+activate LevelController
+
+LevelController -> LevelFactory: createLevel()
+activate LevelFactory
+
+LevelFactory -> Level: new()
+activate Level
+
+LevelFactory -> EntityCollection: new()
+activate EntityCollection
+EntityCollection --> LevelFactory: EntityCollection
+deactivate EntityCollection
+
+LevelFactory -> WallCollection: new()
+activate WallCollection
+WallCollection --> LevelFactory: WallCollection
+deactivate WallCollection
+
+LevelFactory -> Level: setEntityCollection(EntityCollection)
+LevelFactory -> Level: setWallCollection(WallCollection)
+
+LevelFactory -> Level: initializeLevel()
+deactivate LevelFactory
+
+Level -> LevelController: Level
+deactivate Level
+
+LevelController -> Game: Level
+deactivate LevelController
+
+Game -> Player: updateToView(levelMap)
+deactivate Game
+
+@enduml

@@ -74,7 +74,7 @@ package level{
         }
 }
 package entity{
-    class Entity {
+    abstract class Entity <<abstract>> {
       # frames: List<Integer>
       # velocityX: double
       # height: double
