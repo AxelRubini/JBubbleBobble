@@ -1,0 +1,1405 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.9.15)  22 SEP 2024 22:24
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**./mainUML.tex
+(mainUML.tex
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-01-04>
+(C:\Program Files\MiKTeX\tex/latex/standalone\standalone.cls
+Document Class: standalone 2022/10/10 v1.3b Class to compile TeX sub-files stan
+dalone
+(C:\Program Files\MiKTeX\tex/latex/tools\shellesc.sty
+Package: shellesc 2023/07/08 v1.0d unified shell escape interface for LaTeX
+Package shellesc Info: Restricted shell escape enabled on input line 77.
+)
+(C:\Program Files\MiKTeX\tex/generic/iftex\ifluatex.sty
+Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
+
+(C:\Program Files\MiKTeX\tex/generic/iftex\iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+))
+(C:\Program Files\MiKTeX\tex/latex/xkeyval\xkeyval.sty
+Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
+
+(C:\Program Files\MiKTeX\tex/generic/xkeyval\xkeyval.tex
+(C:\Program Files\MiKTeX\tex/generic/xkeyval\xkvutils.tex
+\XKV@toks=\toks17
+\XKV@tempa@toks=\toks18
+
+(C:\Program Files\MiKTeX\tex/generic/xkeyval\keyval.tex))
+\XKV@depth=\count187
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+\sa@internal=\count188
+\c@sapage=\count189
+
+(C:\Program Files\MiKTeX\tex/latex/standalone\standalone.cfg
+File: standalone.cfg 2022/10/10 v1.3b Default configuration file for 'standalon
+e' class
+)
+(C:\Program Files\MiKTeX\tex/latex/base\article.cls
+Document Class: article 2023/05/17 v1.4n Standard LaTeX document class
+(C:\Program Files\MiKTeX\tex/latex/base\size10.clo
+File: size10.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count190
+\c@section=\count191
+\c@subsection=\count192
+\c@subsubsection=\count193
+\c@paragraph=\count194
+\c@subparagraph=\count195
+\c@figure=\count196
+\c@table=\count197
+\abovecaptionskip=\skip48
+\belowcaptionskip=\skip49
+\bibindent=\dimen140
+)
+\sa@box=\box51
+)
+(C:\Program Files\MiKTeX\tex/latex/amsmath\amsmath.sty
+Package: amsmath 2023/05/13 v2.17o AMS math features
+\@mathmargin=\skip50
+
+For additional information on amsmath, use the `?' option.
+(C:\Program Files\MiKTeX\tex/latex/amsmath\amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+
+(C:\Program Files\MiKTeX\tex/latex/amsmath\amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks19
+\ex@=\dimen141
+))
+(C:\Program Files\MiKTeX\tex/latex/amsmath\amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen142
+)
+(C:\Program Files\MiKTeX\tex/latex/amsmath\amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count198
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count199
+\leftroot@=\count266
+LaTeX Info: Redefining \overline on input line 399.
+LaTeX Info: Redefining \colon on input line 410.
+\classnum@=\count267
+\DOTSCASE@=\count268
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box52
+\strutbox@=\box53
+LaTeX Info: Redefining \big on input line 722.
+LaTeX Info: Redefining \Big on input line 723.
+LaTeX Info: Redefining \bigg on input line 724.
+LaTeX Info: Redefining \Bigg on input line 725.
+\big@size=\dimen143
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count269
+LaTeX Info: Redefining \bmod on input line 905.
+LaTeX Info: Redefining \pmod on input line 910.
+LaTeX Info: Redefining \smash on input line 940.
+LaTeX Info: Redefining \relbar on input line 970.
+LaTeX Info: Redefining \Relbar on input line 971.
+\c@MaxMatrixCols=\count270
+\dotsspace@=\muskip16
+\c@parentequation=\count271
+\dspbrk@lvl=\count272
+\tag@help=\toks20
+\row@=\count273
+\column@=\count274
+\maxfields@=\count275
+\andhelp@=\toks21
+\eqnshift@=\dimen144
+\alignsep@=\dimen145
+\tagshift@=\dimen146
+\tagwidth@=\dimen147
+\totwidth@=\dimen148
+\lineht@=\dimen149
+\@envbody=\toks22
+\multlinegap=\skip51
+\multlinetaggap=\skip52
+\mathdisplay@stack=\toks23
+LaTeX Info: Redefining \[ on input line 2953.
+LaTeX Info: Redefining \] on input line 2954.
+)
+(C:\Program Files\MiKTeX\tex/latex/pdfpages\pdfpages.sty
+Package: pdfpages 2024/08/20 v0.6b Insert pages of external PDF documents (AM)
+
+(C:\Program Files\MiKTeX\tex/latex/base\ifthen.sty
+Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
+)
+(C:\Program Files\MiKTeX\tex/latex/tools\calc.sty
+Package: calc 2023/07/08 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count276
+\calc@Bcount=\count277
+\calc@Adimen=\dimen150
+\calc@Bdimen=\dimen151
+\calc@Askip=\skip53
+\calc@Bskip=\skip54
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count278
+\calc@Cskip=\skip55
+)
+(C:\Program Files\MiKTeX\tex/latex/eso-pic\eso-pic.sty
+Package: eso-pic 2023/05/03 v3.0c eso-pic (RN)
+\ESO@tempdima=\dimen152
+\ESO@tempdimb=\dimen153
+
+(C:\Program Files\MiKTeX\tex/latex/xcolor\xcolor.sty
+Package: xcolor 2023/11/15 v3.01 LaTeX color extensions (UK)
+
+(C:\Program Files\MiKTeX\tex/latex/graphics-cfg\color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 274.
+
+(C:\Program Files\MiKTeX\tex/latex/graphics-def\pdftex.def
+File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
+)
+(C:\Program Files\MiKTeX\tex/latex/graphics\mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1350.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1354.
+Package xcolor Info: Model `RGB' extended on input line 1366.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1368.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1370.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1371.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1372.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1373.
+))
+(C:\Program Files\MiKTeX\tex/latex/graphics\graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(C:\Program Files\MiKTeX\tex/latex/graphics\graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+
+(C:\Program Files\MiKTeX\tex/latex/graphics\trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+)
+(C:\Program Files\MiKTeX\tex/latex/graphics-cfg\graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+)
+\Gin@req@height=\dimen154
+\Gin@req@width=\dimen155
+)
+\AM@pagewidth=\dimen156
+\AM@pageheight=\dimen157
+\AM@fboxrule=\dimen158
+
+(C:\Program Files\MiKTeX\tex/latex/pdfpages\pppdftex.def
+File: pppdftex.def 2024/08/20 v0.6b Pdfpages driver for pdfTeX (AM)
+)
+\pdfpages@includegraphics@status=\count279
+\AM@pagebox=\box54
+\AM@global@opts=\toks24
+\AM@pagecnt=\count280
+\AM@toc@title=\toks25
+\AM@lof@heading=\toks26
+\c@AM@survey=\count281
+\AM@templatesizebox=\box55
+)
+(C:\Program Files\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
+File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count282
+\l__pdf_internal_box=\box56
+)
+(C:/Users\Axel\Desktop\Test\JBubbleBobble\auxil\mainUML.aux)
+\openout1 = `mainUML.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+
+(C:\Program Files\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count283
+\scratchdimen=\dimen159
+\scratchbox=\box57
+\nofMPsegments=\count284
+\nofMParguments=\count285
+\everyMPshowfont=\toks27
+\MPscratchCnt=\count286
+\MPscratchDim=\dimen160
+\MPnumerator=\count287
+\makeMPintoPDFobject=\count288
+\everyMPtoPDFconversion=\toks28
+) (C:\Program Files\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(C:\Program Files\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+))
+(C:\Program Files\MiKTeX\tex/latex/pdflscape\pdflscape.sty
+Package: pdflscape 2022-10-27 v0.13 Display of landscape pages in PDF
+
+(C:\Program Files\MiKTeX\tex/latex/pdflscape\pdflscape-nometadata.sty
+Package: pdflscape-nometadata 2022-10-28 v0.13 Display of landscape pages in PD
+F (HO)
+
+(C:\Program Files\MiKTeX\tex/latex/graphics\lscape.sty
+Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
+)
+Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
+))
+(controller/ControllerAndLevelView.tex
+
+controller/ControllerAndLevelView.tex:1: LaTeX Error: Can be used only in pream
+ble.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \documentclass
+                  {standalone}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+controller/ControllerAndLevelView.tex:2: LaTeX Error: Can be used only in pream
+ble.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 \usepackage
+               {tikz}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+controller/ControllerAndLevelView.tex:3: LaTeX Error: Can be used only in pream
+ble.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 \usepackage
+               {aeguill}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+controller/ControllerAndLevelView.tex:4: LaTeX Error: Can be used only in pream
+ble.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4 \begin{document}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+controller/ControllerAndLevelView.tex:710: LaTeX Error: Environment tikzpicture
+ undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.710 }
+       
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+controller/ControllerAndLevelView.tex:710: Undefined control sequence.
+<argument> ...pattern=on 7.0pt off 7.0pt} ] \draw 
+                                                  [pstyle0] (13.5pt,11pt) --...
+l.710 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+controller/ControllerAndLevelView.tex:710: Undefined control sequence.
+<argument> ...,13.5pt) arc(180:270:2.5pt) ; \draw 
+                                                  [pstyle1] (11pt,35.6211pt)...
+l.710 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+controller/ControllerAndLevelView.tex:710: Undefined control sequence.
+<argument> ...pt) -- (92.4881pt,35.6211pt); \node 
+                                                  at (15pt,13pt)[below right...
+l.710 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+controller/ControllerAndLevelView.tex:710: Undefined control sequence.
+<argument> ...black]{\textbf {controller}}; \draw 
+                                                  [pstyle0] (37.5pt,593pt) -...
+l.710 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+controller/ControllerAndLevelView.tex:710: Undefined control sequence.
+<argument> ...595.5pt) arc(180:270:2.5pt) ; \draw 
+                                                  [pstyle1] (35pt,617.6211pt...
+l.710 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+controller/ControllerAndLevelView.tex:710: Undefined control sequence.
+<argument> ...) -- (157.9945pt,617.6211pt); \node 
+                                                  at (39pt,595pt)[below righ...
+l.710 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+controller/ControllerAndLevelView.tex:710: Undefined control sequence.
+<argument> ...{\textbf {applicationstate}}; \draw 
+                                                  [pstyle0] (50.5pt,1909pt) ...
+l.710 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+controller/ControllerAndLevelView.tex:710: Undefined control sequence.
+<argument> ...911.5pt) arc(180:270:2.5pt) ; \draw 
+                                                  [pstyle1] (48pt,1933.6211p...
+l.710 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+controller/ControllerAndLevelView.tex:710: Undefined control sequence.
+<argument> ... -- (129.5198pt,1933.6211pt); \node 
+                                                  at (52pt,1911pt)[below rig...
+l.710 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+controller/ControllerAndLevelView.tex:710: Undefined control sequence.
+<argument> ...or=black]{\textbf {command}}; \draw 
+                                                  [pstyle0] (1041.5pt,1892pt...
+l.710 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+controller/ControllerAndLevelView.tex:710: Undefined control sequence.
+<argument> ...894.5pt) arc(180:270:2.5pt) ; \draw 
+                                                  [pstyle1] (1039pt,1916.621...
+l.710 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+controller/ControllerAndLevelView.tex:710: Undefined control sequence.
+<argument> ...-- (1121.3914pt,1916.6211pt); \node 
+                                                  at (1043pt,1894pt)[below r...
+l.710 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+controller/ControllerAndLevelView.tex:710: Undefined control sequence.
+<argument> ...=black]{\textbf {gamestate}}; \draw 
+                                                  [pstyle0] (439.5pt,833pt) ...
+l.710 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+controller/ControllerAndLevelView.tex:710: Undefined control sequence.
+<argument> ...39.5pt,1128.3164pt) -- cycle; \draw 
+                                                  [pstyle0] (505.1879pt,842....
+l.710 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+controller/ControllerAndLevelView.tex:710: Undefined control sequence.
+<argument> ...105pt) ellipse (9pt and 9pt); \node 
+                                                  at (505.1879pt,842.3105pt)...
+l.710 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+controller/ControllerAndLevelView.tex:710: Undefined control sequence.
+<argument> ...105pt)[]{\textbf {\Large C}}; \node 
+                                                  at (522.6879pt,833pt)[belo...
+l.710 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+controller/ControllerAndLevelView.tex:710: Undefined control sequence.
+<argument> ...r=black]{ApplicationContext}; \draw 
+                                                  [pstyle1] (440.5pt,856.621...
+l.710 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+controller/ControllerAndLevelView.tex:710: Undefined control sequence.
+<argument> ...) -- (705.3818pt,856.6211pt); \draw 
+                                                  [pstyle1] (447.5pt,868.431...
+l.710 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+controller/ControllerAndLevelView.tex:710: Undefined control sequence.
+<argument> ...ctangle (453.5pt,874.4316pt); \node 
+                                                  at (457.5pt,860.6211pt)[be...
+l.710 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+controller/ControllerAndLevelView.tex:710: Undefined control sequence.
+<argument> ...k]{userManager: UserManager}; \draw 
+                                                  [pstyle1] (447.5pt,887.052...
+l.710 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+controller/ControllerAndLevelView.tex:710: Undefined control sequence.
+<argument> ...ctangle (453.5pt,893.0527pt); \node 
+                                                  at (457.5pt,879.2422pt)[be...
+l.710 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+controller/ControllerAndLevelView.tex:710: Undefined control sequence.
+<argument> ...nstance: ApplicationContext}; \draw 
+                                                  [pstyle1] (447.5pt,905.673...
+l.710 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+controller/ControllerAndLevelView.tex:710: Undefined control sequence.
+<argument> ...ctangle (453.5pt,911.6738pt); \node 
+                                                  at (457.5pt,897.8633pt)[be...
+l.710 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+controller/ControllerAndLevelView.tex:710: Undefined control sequence.
+<argument> ...ck]{state: ApplicationState}; \draw 
+                                                  [pstyle1] (447.5pt,924.294...
+l.710 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+controller/ControllerAndLevelView.tex:710: Undefined control sequence.
+<argument> ...ctangle (453.5pt,930.2949pt); \node 
+                                                  at (457.5pt,916.4844pt)[be...
+l.710 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+controller/ControllerAndLevelView.tex:710: Undefined control sequence.
+<argument> ...ght,color=black]{user: User}; \draw 
+                                                  [pstyle1] (447.5pt,942.916...
+l.710 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+controller/ControllerAndLevelView.tex:710: Undefined control sequence.
+<argument> ...ectangle (453.5pt,948.916pt); \node 
+                                                  at (457.5pt,935.1055pt)[be...
+l.710 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+LaTeX Font Info:    Trying to load font information for OML+cmr on input line 7
+10.
+(C:\Program Files\MiKTeX\tex/latex/base\omlcmr.fd
+File: omlcmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 710.
+
+controller/ControllerAndLevelView.tex:710: Undefined control sequence.
+<argument> ...String, String\textgreater }; \draw 
+                                                  [pstyle1] (440.5pt,957.726...
+l.710 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+controller/ControllerAndLevelView.tex:710: Undefined control sequence.
+<argument> ...) -- (705.3818pt,957.7266pt); \draw 
+                                                  [pstyle0] (450.5pt,972.537...
+l.710 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+controller/ControllerAndLevelView.tex:710: Undefined control sequence.
+<argument> ...371pt) ellipse (3pt and 3pt); \node 
+                                                  at (457.5pt,961.7266pt)[be...
+l.710 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+controller/ControllerAndLevelView.tex:710: Undefined control sequence.
+<argument> ...tUserManager(): UserManager}; \draw 
+                                                  [pstyle0] (450.5pt,991.158...
+l.710 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+controller/ControllerAndLevelView.tex:710: Undefined control sequence.
+<argument> ...582pt) ellipse (3pt and 3pt); \node 
+                                                  at (457.5pt,980.3477pt)[be...
+l.710 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+controller/ControllerAndLevelView.tex:710: Undefined control sequence.
+<argument> ...=black]{setUser(User): void}; \draw 
+                                                  [pstyle0] (450.5pt,1009.77...
+l.710 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+controller/ControllerAndLevelView.tex:710: Undefined control sequence.
+<argument> ...793pt) ellipse (3pt and 3pt); \node 
+                                                  at (457.5pt,998.9688pt)[be...
+l.710 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+controller/ControllerAndLevelView.tex:710: Undefined control sequence.
+<argument> ...String, String\textgreater }; \draw 
+                                                  [pstyle0] (450.5pt,1028.40...
+l.710 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+controller/ControllerAndLevelView.tex:710: Undefined control sequence.
+<argument> ...004pt) ellipse (3pt and 3pt); \node 
+                                                  at (457.5pt,1017.5898pt)[b...
+l.710 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+controller/ControllerAndLevelView.tex:710: Undefined control sequence.
+<argument> ...rManager(UserManager): void}; \draw 
+                                                  [pstyle0] (450.5pt,1047.02...
+l.710 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+controller/ControllerAndLevelView.tex:710: Undefined control sequence.
+<argument> ...215pt) ellipse (3pt and 3pt); \node 
+                                                  at (457.5pt,1036.2109pt)[b...
+l.710 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+controller/ControllerAndLevelView.tex:710: Undefined control sequence.
+<argument> ...olor=black]{getUser(): User}; \draw 
+                                                  [pstyle0] (450.5pt,1065.64...
+l.710 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+controller/ControllerAndLevelView.tex:710: Undefined control sequence.
+<argument> ...426pt) ellipse (3pt and 3pt); \node 
+                                                  at (457.5pt,1054.832pt)[be...
+l.710 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+controller/ControllerAndLevelView.tex:710: Undefined control sequence.
+<argument> ...tance(): ApplicationContext}; \draw 
+                                                  [pstyle0] (450.5pt,1084.26...
+l.710 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+controller/ControllerAndLevelView.tex:710: Undefined control sequence.
+<argument> ...637pt) ellipse (3pt and 3pt); \node 
+                                                  at (457.5pt,1073.4531pt)[b...
+l.710 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+controller/ControllerAndLevelView.tex:710: Undefined control sequence.
+<argument> ...ate(ApplicationState): void}; \draw 
+                                                  [pstyle0] (450.5pt,1102.88...
+l.710 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+controller/ControllerAndLevelView.tex:710: Undefined control sequence.
+<argument> ...848pt) ellipse (3pt and 3pt); \node 
+                                                  at (457.5pt,1092.0742pt)[b...
+l.710 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+controller/ControllerAndLevelView.tex:710: Undefined control sequence.
+<argument> ...etState(): ApplicationState}; \draw 
+                                                  [pstyle0] (450.5pt,1121.50...
+l.710 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+controller/ControllerAndLevelView.tex:710: Undefined control sequence.
+<argument> ...059pt) ellipse (3pt and 3pt); \node 
+                                                  at (457.5pt,1110.6953pt)[b...
+l.710 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+controller/ControllerAndLevelView.tex:710: Undefined control sequence.
+<argument> ...]{getAvatar(String): String}; \draw 
+                                                  [pstyle0] (741.5pt,946pt) ...
+l.710 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+controller/ControllerAndLevelView.tex:710: Undefined control sequence.
+<argument> ...41.5pt,1015.2031pt) -- cycle; \draw 
+                                                  [pstyle0] (754.9215pt,963....
+l.710 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+controller/ControllerAndLevelView.tex:710: Undefined control sequence.
+<argument> ...291pt) ellipse (9pt and 9pt); \node 
+                                                  at (754.9215pt,963.291pt)[...
+l.710 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+controller/ControllerAndLevelView.tex:710: Undefined control sequence.
+<argument> ...291pt)[]{\textbf {\Large I}}; \node 
+                                                  at (789.829pt,946pt)[below...
+l.710 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+controller/ControllerAndLevelView.tex:710: LaTeX Error: Command \guillemotleft 
+unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.710 }
+       
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+controller/ControllerAndLevelView.tex:710: LaTeX Error: Command \guillemotright
+ unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.710 }
+       
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+controller/ControllerAndLevelView.tex:710: Undefined control sequence.
+<argument> ... interface\guillemotright }}; \node 
+                                                  at (767.0152pt,961.9609pt)...
+l.710 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+controller/ControllerAndLevelView.tex:710: Undefined control sequence.
+<argument> ...{\textit {ApplicationState}}; \draw 
+                                                  [pstyle1] (742.5pt,985.582...
+l.710 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+controller/ControllerAndLevelView.tex:710: Undefined control sequence.
+<argument> ...t) -- (877.6087pt,985.582pt); \draw 
+                                                  [pstyle1] (742.5pt,993.582...
+l.710 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+controller/ControllerAndLevelView.tex:710: Undefined control sequence.
+<argument> ...t) -- (877.6087pt,993.582pt); \draw 
+                                                  [pstyle0] (752.5pt,1008.39...
+l.710 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+controller/ControllerAndLevelView.tex:710: Undefined control sequence.
+<argument> ...926pt) ellipse (3pt and 3pt); \node 
+                                                  at (759.5pt,997.582pt)[bel...
+l.710 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+controller/ControllerAndLevelView.tex:710: Undefined control sequence.
+<argument> ...r=black]{enterState(): void}; \draw 
+                                                  [pstyle0] (1169.5pt,81pt) ...
+l.710 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+controller/ControllerAndLevelView.tex:710: Undefined control sequence.
+<argument> ...169.5pt,245.9688pt) -- cycle; \draw 
+                                                  [pstyle0] (1237.0065pt,90....
+l.710 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+controller/ControllerAndLevelView.tex:710: Undefined control sequence.
+<argument> ...105pt) ellipse (9pt and 9pt); \node 
+                                                  at (1237.0065pt,90.3105pt)...
+l.710 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+controller/ControllerAndLevelView.tex:710: Undefined control sequence.
+<argument> ...105pt)[]{\textbf {\Large C}}; \node 
+                                                  at (1254.5065pt,81pt)[belo...
+l.710 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+controller/ControllerAndLevelView.tex:710: Undefined control sequence.
+<argument> ...t,color=black]{AudioManager}; \draw 
+                                                  [pstyle1] (1170.5pt,104.62...
+l.710 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+controller/ControllerAndLevelView.tex:710: Undefined control sequence.
+<argument> ...) -- (1409.256pt,104.6211pt); \draw 
+                                                  [pstyle1] (1177.5pt,116.43...
+l.710 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+controller/ControllerAndLevelView.tex:710: Undefined control sequence.
+<argument> ...tangle (1183.5pt,122.4316pt); \node 
+                                                  at (1187.5pt,108.6211pt)[b...
+l.710 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+controller/ControllerAndLevelView.tex:710: Undefined control sequence.
+<argument> ...ack]{instance: AudioManager}; \draw 
+                                                  [pstyle1] (1177.5pt,135.05...
+l.710 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+controller/ControllerAndLevelView.tex:710: Undefined control sequence.
+<argument> ...tangle (1183.5pt,141.0527pt); \node 
+                                                  at (1187.5pt,127.2422pt)[b...
+l.710 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+controller/ControllerAndLevelView.tex:710: Undefined control sequence.
+<argument> ...olor=black]{themeClip: Clip}; \draw 
+                                                  [pstyle1] (1170.5pt,149.86...
+l.710 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+controller/ControllerAndLevelView.tex:710: Undefined control sequence.
+<argument> ...) -- (1409.256pt,149.8633pt); \draw 
+                                                  [pstyle0] (1180.5pt,164.67...
+l.710 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+controller/ControllerAndLevelView.tex:710: Undefined control sequence.
+<argument> ...738pt) ellipse (3pt and 3pt); \node 
+                                                  at (1187.5pt,153.8633pt)[b...
+l.710 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+controller/ControllerAndLevelView.tex:710: Undefined control sequence.
+<argument> ...or=black]{stopTheme(): void}; \draw 
+                                                  [pstyle0] (1180.5pt,183.29...
+l.710 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+controller/ControllerAndLevelView.tex:710: Undefined control sequence.
+<argument> ...949pt) ellipse (3pt and 3pt); \node 
+                                                  at (1187.5pt,172.4844pt)[b...
+l.710 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+controller/ControllerAndLevelView.tex:710: Undefined control sequence.
+<argument> ...r=black]{play(String): void}; \draw 
+                                                  [pstyle0] (1180.5pt,201.91...
+l.710 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+controller/ControllerAndLevelView.tex:710: Undefined control sequence.
+<argument> ...916pt) ellipse (3pt and 3pt); \node 
+                                                  at (1187.5pt,191.1055pt)[b...
+l.710 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+controller/ControllerAndLevelView.tex:710: Undefined control sequence.
+<argument> ...e(Observable, Object): void}; \draw 
+                                                  [pstyle0] (1180.5pt,220.53...
+l.710 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+controller/ControllerAndLevelView.tex:710: Undefined control sequence.
+<argument> ...371pt) ellipse (3pt and 3pt); \node 
+                                                  at (1187.5pt,209.7266pt)[b...
+l.710 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+controller/ControllerAndLevelView.tex:710: Undefined control sequence.
+<argument> ...getInstance(): AudioManager}; \draw 
+                                                  [pstyle0] (1180.5pt,239.15...
+l.710 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+controller/ControllerAndLevelView.tex:710: Undefined control sequence.
+<argument> ...582pt) ellipse (3pt and 3pt); \node 
+                                                  at (1187.5pt,228.3477pt)[b...
+l.710 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+controller/ControllerAndLevelView.tex:710: Undefined control sequence.
+<argument> ...ck]{playTheme(String): void}; \draw 
+                                                  [pstyle0] (412pt,2260pt) a...
+l.710 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+controller/ControllerAndLevelView.tex:710: Undefined control sequence.
+<argument> ...(412pt,2329.2031pt) -- cycle; \draw 
+                                                  [pstyle0] (437.1746pt,2277...
+l.710 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+controller/ControllerAndLevelView.tex:710: Undefined control sequence.
+<argument> ...291pt) ellipse (9pt and 9pt); \node 
+                                                  at (437.1746pt,2277.291pt)...
+l.710 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+controller/ControllerAndLevelView.tex:710: Undefined control sequence.
+<argument> ...291pt)[]{\textbf {\Large I}}; \node 
+                                                  at (453.9683pt,2260pt)[bel...
+l.710 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+controller/ControllerAndLevelView.tex:710: LaTeX Error: Command \guillemotleft 
+unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.710 }
+       
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+controller/ControllerAndLevelView.tex:710: LaTeX Error: Command \guillemotright
+ unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.710 }
+       
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+controller/ControllerAndLevelView.tex:710: Undefined control sequence.
+<argument> ... interface\guillemotright }}; \node 
+                                                  at (451.88pt,2275.9609pt)[...
+l.710 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+controller/ControllerAndLevelView.tex:710: Undefined control sequence.
+<argument> ...or=black]{\textit {Command}}; \draw 
+                                                  [pstyle1] (413pt,2299.582p...
+l.710 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+controller/ControllerAndLevelView.tex:710: Undefined control sequence.
+<argument> ...) -- (532.7756pt,2299.582pt); \draw 
+                                                  [pstyle1] (413pt,2307.582p...
+l.710 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+controller/ControllerAndLevelView.tex:710: Undefined control sequence.
+<argument> ...) -- (532.7756pt,2307.582pt); \draw 
+                                                  [pstyle0] (423pt,2322.3926...
+l.710 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+controller/ControllerAndLevelView.tex:710: Undefined control sequence.
+<argument> ...926pt) ellipse (3pt and 3pt); \node 
+                                                  at (430pt,2311.582pt)[belo...
+l.710 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+controller/ControllerAndLevelView.tex:710: Undefined control sequence.
+<argument> ...olor=black]{execute(): void}; \draw 
+                                                  [pstyle0] (1011pt,1226pt) ...
+l.710 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+controller/ControllerAndLevelView.tex:710: Undefined control sequence.
+<argument> ...1011pt,1651.6641pt) -- cycle; \draw 
+                                                  [pstyle0] (1107.8138pt,123...
+l.710 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+controller/ControllerAndLevelView.tex:710: Undefined control sequence.
+<argument> ...105pt) ellipse (9pt and 9pt); \node 
+                                                  at (1107.8138pt,1235.3105p...
+l.710 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+controller/ControllerAndLevelView.tex:710: Undefined control sequence.
+<argument> ...105pt)[]{\textbf {\Large C}}; \node 
+                                                  at (1125.3138pt,1226pt)[be...
+l.710 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+controller/ControllerAndLevelView.tex:710: Undefined control sequence.
+<argument> ...ht,color=black]{GameManager}; \draw 
+                                                  [pstyle1] (1012pt,1249.621...
+l.710 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+controller/ControllerAndLevelView.tex:710: Undefined control sequence.
+<argument> ...-- (1307.5481pt,1249.6211pt); \draw 
+                                                  [pstyle1] (1019pt,1261.431...
+l.710 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+controller/ControllerAndLevelView.tex:710: Undefined control sequence.
+<argument> ...ctangle (1025pt,1267.4316pt); \node 
+                                                  at (1029pt,1253.6211pt)[be...
+l.710 }
+       
+(That makes 100 errors; please try again.) 
+Here is how much of TeX's memory you used:
+ 3938 strings out of 474486
+ 62654 string characters out of 5753573
+ 1928542 words of memory out of 5000000
+ 26185 multiletter control sequences out of 15000+600000
+ 559030 words of font info for 39 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 72i,2n,79p,368b,161s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+controller/ControllerAndLevelView.tex:710:  ==> Fatal error occurred, no output
+ PDF file produced!
