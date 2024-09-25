@@ -1,7 +1,10 @@
 package jbubblebobble.controller;
 
+import javafx.animation.PauseTransition;
+import javafx.application.Platform;
 import javafx.scene.Node;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 import jbubblebobble.controller.command.*;
 import jbubblebobble.model.entity.Entity;
 import jbubblebobble.model.entity.characters.Enemy;
@@ -14,7 +17,7 @@ import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import lombok.SneakyThrows;
 import utility.Config;
-
+import javafx.application.Platform;
 import java.io.IOException;
 import java.util.List;
 
@@ -36,6 +39,8 @@ public class LevelController {
     private AnimationTimer timer;
     private long levelStartTime;
 
+    private boolean isActive = true;
+
     /**
      * Instantiates a new Level controller.
      *
@@ -53,6 +58,9 @@ public class LevelController {
         this.pauseCommand = new PauseCommand();
         this.resumeCommand = new ResumeCommand();
         this.levelStartTime = System.currentTimeMillis();
+        init();
+    }
+    private void init(){
         level.addObserver(levelView);
         level.getPlayer().addAudioObserver(AudioManager.getInstance());
         startGameLoop();
@@ -85,7 +93,9 @@ public class LevelController {
                     }
                     lastUpdate = now;
                 }
-                checkEndOfLevel();
+                if (isActive) {
+                    checkEndOfLevel();
+                }
                 try {
                     checkEndOfGame();
                 } catch (IOException e) {
@@ -109,20 +119,28 @@ public class LevelController {
         }
     }
 
+
+
     private void checkEndOfLevel() {
         List<Entity> t = level.getEntitiesCollection().getEntities();
-        if (t.stream().noneMatch(entity -> entity instanceof Enemy)) {
-            try {
-                saveUser();
-                if (GameManager.getInstance().changeLevel((Stage) levelView.getScene().getWindow())) {
-                    level.resetLevel();
-                    timer.stop();
+        if (t.stream().noneMatch(entity -> entity instanceof Enemy && isActive)) {
+            isActive = false;
+            Stage stage = (Stage) levelView.getScene().getWindow();
+            PauseTransition delay = new PauseTransition(Duration.seconds(5));
+            delay.setOnFinished(event -> {
+                try {
+                    saveUser();
+                    if (GameManager.getInstance().changeLevel(stage)) {
+                        level.resetLevel();
+                        resetController();
+                        timer.stop();
+                    }
+                } catch (IOException e) {
+                    e.printStackTrace();
                 }
-
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            timer.stop();
+                timer.stop();
+            });
+            delay.play();
         }
     }
 
@@ -216,6 +234,16 @@ public class LevelController {
             timer.start();
         }
     }
+    private void resetKeyStates() {
+        for (int i = 0; i < keys.length; i++) {
+            keys[i] = false;
+        }
+    }
+    public void resetController() {
+        resetKeyStates();
+        System.gc();
+    }
+
 
     /**
      * Gets score label.

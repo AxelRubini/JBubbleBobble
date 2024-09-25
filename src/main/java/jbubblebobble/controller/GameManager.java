@@ -69,6 +69,9 @@ public class GameManager {
             AudioManager.getInstance().stopTheme(); // stop theme music
             return true;
         }
+        if (levelController != null) {
+            getLevelController().resetController();
+        }
         setState(new StartState(stage));
         return false;
     }
