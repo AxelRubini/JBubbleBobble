@@ -53,6 +53,8 @@ public abstract class Enemy extends Entity implements PlatformDetection {
      */
     protected long vulnerableTime;
 
+    protected long startCaughtByBubbleTime;
+
 
     /**
      * Instantiates a new Enemy.
@@ -199,6 +201,12 @@ public abstract class Enemy extends Entity implements PlatformDetection {
     }
 
     public void update() {
+        if (caughtByBubble) {
+            if (System.currentTimeMillis() - startCaughtByBubbleTime > Config.CAUGHT_BY_BUBBLE_TIME) {
+                caughtByBubble = false;
+                state = facingRight ? EnemyState.FACING_RIGHT : EnemyState.FACING_LEFT;
+            }
+        }
         if (die) {
             dieRoutine();
         } else if (vulnerable) {
@@ -240,6 +248,7 @@ public abstract class Enemy extends Entity implements PlatformDetection {
     public void setCaughtByBubble(boolean isCaughtByBubble) {
         this.caughtByBubble = isCaughtByBubble;
         state = EnemyState.IS_IN_PRISON;
+        startCaughtByBubbleTime = System.currentTimeMillis();
 
 
     }
@@ -251,6 +260,7 @@ public abstract class Enemy extends Entity implements PlatformDetection {
      */
     public void setDie(boolean die) {
         this.die = die;
+        caughtByBubble = false;
         state = EnemyState.DIE;
         setVelocityY(Config.JUMP_STRENGTH);
         setVelocityX(randomize() ? 1.5 : -1.5);

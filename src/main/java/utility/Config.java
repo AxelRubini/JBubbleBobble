@@ -7,12 +7,13 @@ public final class Config {
 
 
 
+
     private Config(){
 
         throw new IllegalStateException("Utility class");
 
     }
-
+    public static final long CAUGHT_BY_BUBBLE_TIME = 15000;
     /**
      * The constant PLAYER_SPEED.
      */
