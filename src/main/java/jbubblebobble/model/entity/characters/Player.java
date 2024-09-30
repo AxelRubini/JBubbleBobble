@@ -44,7 +44,6 @@ public class Player extends Entity implements PlatformDetection {
     private double distance;
     private boolean alive;
     private int audio;
-    private List<Observer> observers;
     private long lastJumpTime;
 
     /**
@@ -93,7 +92,6 @@ public class Player extends Entity implements PlatformDetection {
         startY = getY();
         alive = true;
         facingRight = true;
-        observers = new ArrayList<>();
         addObserver(level);
 
     }
@@ -109,7 +107,9 @@ public class Player extends Entity implements PlatformDetection {
             if ((enemy.isCaughtByBubble()  || enemy.isVulnerable()) && !enemy.isDie()) {
                 if (enemy.isCaughtByBubble() && jumping) {
                     audio =2;
-                    notifyAudio(observers.get(0));
+                    setChanged();
+                    notifyObservers(audio);
+
                     List<Bubble> nearBubbles = level.getEntitiesCollection().getNearBubbles(this);
                     for (Bubble bubble : nearBubbles) {
                         bubble.setPopping(true);
@@ -135,7 +135,8 @@ public class Player extends Entity implements PlatformDetection {
             }
         } else if (entity instanceof PowerUp && ((PowerUp) entity).isActive()){
             audio = 3;
-            notifyAudio(observers.get(0));
+            setChanged();
+            notifyObservers(audio);
 
         }
     }
@@ -411,8 +412,9 @@ public class Player extends Entity implements PlatformDetection {
         velocityY = 0;
         frames = List.of(0,1,2,3);
         alive = false;
-        audio = 1;
-        notifyAudio(observers.get(0));
+        audio =1;
+        setChanged();
+        notifyObservers(audio);
         if (lives == 0){
             level.gameOver();
             System.out.println("Game Over       " + "Print Metodo LoseLife Player");
@@ -734,16 +736,6 @@ public class Player extends Entity implements PlatformDetection {
         instance = null;
     }
 
-    /**
-     * Add audio observer.
-     *
-     * @param observer the observer
-     */
-    public void addAudioObserver(Observer observer){
-        if (observers.isEmpty()){
-            observers.add(observer);
-        }
-    }
 
 
     /**

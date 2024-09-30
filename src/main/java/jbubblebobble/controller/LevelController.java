@@ -62,7 +62,7 @@ public class LevelController {
     }
     private void init(){
         level.addObserver(levelView);
-        level.getPlayer().addAudioObserver(AudioManager.getInstance());
+        level.getPlayer().addObserver(AudioManager.getInstance());
         startGameLoop();
         setupKeyHandlers();
     }
